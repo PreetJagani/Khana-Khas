@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="DjK-mC-hp2">
+                                <rect key="frame" x="32" y="746" width="116" height="26"/>
+                            </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUF-g4-d4i">
                                 <rect key="frame" x="32" y="734" width="329" height="50"/>
                                 <subviews>
@@ -25,18 +28,34 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.right" translatesAutoresizingMaskIntoConstraints="NO" id="Hml-eu-axZ">
+                                        <rect key="frame" x="155.66666666666666" y="16" width="18" height="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18" id="QUC-k2-ywn"/>
+                                            <constraint firstAttribute="width" secondItem="Hml-eu-axZ" secondAttribute="height" multiplier="1:1" id="do3-7Y-30g"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BnZ-xO-HD3"/>
+                                    <constraint firstItem="Hml-eu-axZ" firstAttribute="centerX" secondItem="WUF-g4-d4i" secondAttribute="centerX" id="ESc-pv-d9k"/>
                                     <constraint firstItem="aWB-M5-Rj4" firstAttribute="centerY" secondItem="WUF-g4-d4i" secondAttribute="centerY" id="QYr-e9-mr4"/>
                                     <constraint firstItem="aWB-M5-Rj4" firstAttribute="centerX" secondItem="WUF-g4-d4i" secondAttribute="centerX" id="UPX-HS-5pN"/>
+                                    <constraint firstAttribute="width" constant="329" id="mkH-cc-85C"/>
+                                    <constraint firstItem="Hml-eu-axZ" firstAttribute="centerY" secondItem="WUF-g4-d4i" secondAttribute="centerY" id="vXs-VP-N0i"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mkH-cc-85C"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMl-SW-Je7">
                                 <rect key="frame" x="0.0" y="59" width="393" height="675"/>
@@ -50,13 +69,23 @@
                         <constraints>
                             <constraint firstItem="BMl-SW-Je7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ega-kx-9Jf"/>
                             <constraint firstItem="WUF-g4-d4i" firstAttribute="top" secondItem="BMl-SW-Je7" secondAttribute="bottom" id="PyM-HE-Fc5"/>
+                            <constraint firstItem="DjK-mC-hp2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="TRk-Tw-kVv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BMl-SW-Je7" secondAttribute="trailing" id="WdD-WP-EiD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WUF-g4-d4i" secondAttribute="bottom" constant="34" id="Y3T-aJ-pz3"/>
+                            <constraint firstItem="DjK-mC-hp2" firstAttribute="centerY" secondItem="WUF-g4-d4i" secondAttribute="centerY" id="Zj7-s5-s6A"/>
                             <constraint firstItem="WUF-g4-d4i" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="eDJ-DW-HEP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WUF-g4-d4i" secondAttribute="trailing" constant="32" id="iZu-lZ-C5e"/>
                             <constraint firstItem="BMl-SW-Je7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tLH-3N-s93"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="getStartLabel" destination="aWB-M5-Rj4" id="hvk-AR-3bH"/>
+                        <outlet property="iamgeView" destination="Hml-eu-axZ" id="71Y-bs-oh9"/>
+                        <outlet property="pageControl" destination="DjK-mC-hp2" id="Sfm-sp-cO9"/>
+                        <outlet property="parentView" destination="WUF-g4-d4i" id="8UO-Ph-1sa"/>
+                        <outlet property="parentViewLeading" destination="eDJ-DW-HEP" id="b01-ju-ayk"/>
+                        <outlet property="parentViewWidth" destination="mkH-cc-85C" id="O8u-bG-dHJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,6 +116,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.right" width="11.5" height="9.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
