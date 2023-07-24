@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Onboard Get Stated View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="OnboardGetStatedViewController" customModule="Khana_Khas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,19 +38,52 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMl-SW-Je7">
+                                <rect key="frame" x="0.0" y="59" width="393" height="675"/>
+                                <connections>
+                                    <segue destination="tDO-4R-s20" kind="embed" id="S35-fe-0oF"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="BMl-SW-Je7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ega-kx-9Jf"/>
+                            <constraint firstItem="WUF-g4-d4i" firstAttribute="top" secondItem="BMl-SW-Je7" secondAttribute="bottom" id="PyM-HE-Fc5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BMl-SW-Je7" secondAttribute="trailing" id="WdD-WP-EiD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WUF-g4-d4i" secondAttribute="bottom" constant="34" id="Y3T-aJ-pz3"/>
                             <constraint firstItem="WUF-g4-d4i" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="eDJ-DW-HEP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WUF-g4-d4i" secondAttribute="trailing" constant="32" id="iZu-lZ-C5e"/>
+                            <constraint firstItem="BMl-SW-Je7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tLH-3N-s93"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+        <!--Onboard Page View Controller-->
+        <scene sceneID="Jda-hh-5X5">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="tDO-4R-s20" customClass="OnboardPageViewController" customModule="Khana_Khas" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epD-tx-MkJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="-27"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Z8W-sJ-AMr">
+            <objects>
+                <viewController storyboardIdentifier="vc1" id="IaC-bq-DLi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zbE-hn-dL5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xZa-du-b93"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WrG-Oo-719" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="720"/>
         </scene>
     </scenes>
     <resources>

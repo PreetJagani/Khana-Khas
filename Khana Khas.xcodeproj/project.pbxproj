@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD111B592A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD111B582A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift */; };
+		AD111B5B2A6BACC900FE38B5 /* OnboardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD111B5A2A6BACC900FE38B5 /* OnboardPageViewController.swift */; };
 		AD46E9802A6B9E4D003D94AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E97F2A6B9E4D003D94AC /* AppDelegate.swift */; };
 		AD46E9822A6B9E4D003D94AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E9812A6B9E4D003D94AC /* SceneDelegate.swift */; };
 		AD46E9842A6B9E4D003D94AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E9832A6B9E4D003D94AC /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD111B582A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardGetStatedViewController.swift; sourceTree = "<group>"; };
+		AD111B5A2A6BACC900FE38B5 /* OnboardPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageViewController.swift; sourceTree = "<group>"; };
 		AD46E97C2A6B9E4D003D94AC /* Khana Khas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Khana Khas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD46E97F2A6B9E4D003D94AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD46E9812A6B9E4D003D94AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD111B572A6BAC6100FE38B5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD111B582A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift */,
+				AD111B5A2A6BACC900FE38B5 /* OnboardPageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		AD46E9732A6B9E4D003D94AC = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +146,7 @@
 		AD46E9AF2A6B9E8B003D94AC /* Onboard */ = {
 			isa = PBXGroup;
 			children = (
+				AD111B572A6BAC6100FE38B5 /* Controllers */,
 				AD46E9B02A6BA01D003D94AC /* Onboard.storyboard */,
 			);
 			path = Onboard;
@@ -270,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD111B592A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift in Sources */,
 				AD46E9842A6B9E4D003D94AC /* ViewController.swift in Sources */,
 				AD46E9802A6B9E4D003D94AC /* AppDelegate.swift in Sources */,
 				AD46E9822A6B9E4D003D94AC /* SceneDelegate.swift in Sources */,
+				AD111B5B2A6BACC900FE38B5 /* OnboardPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
