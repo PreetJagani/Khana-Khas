@@ -36,14 +36,26 @@
                                             <constraint firstAttribute="width" secondItem="Hml-eu-axZ" secondAttribute="height" multiplier="1:1" id="do3-7Y-30g"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pal-AX-o25">
+                                        <rect key="frame" x="0.0" y="0.0" width="329" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="didpressNextButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jBQ-Kj-wRv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BnZ-xO-HD3"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pal-AX-o25" secondAttribute="bottom" id="EI0-R6-Lk6"/>
                                     <constraint firstItem="Hml-eu-axZ" firstAttribute="centerX" secondItem="WUF-g4-d4i" secondAttribute="centerX" id="ESc-pv-d9k"/>
                                     <constraint firstItem="aWB-M5-Rj4" firstAttribute="centerY" secondItem="WUF-g4-d4i" secondAttribute="centerY" id="QYr-e9-mr4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pal-AX-o25" secondAttribute="trailing" id="T1g-1h-iCA"/>
                                     <constraint firstItem="aWB-M5-Rj4" firstAttribute="centerX" secondItem="WUF-g4-d4i" secondAttribute="centerX" id="UPX-HS-5pN"/>
+                                    <constraint firstItem="Pal-AX-o25" firstAttribute="leading" secondItem="WUF-g4-d4i" secondAttribute="leading" id="mj2-7D-Kxu"/>
                                     <constraint firstAttribute="width" constant="329" id="mkH-cc-85C"/>
+                                    <constraint firstItem="Pal-AX-o25" firstAttribute="top" secondItem="WUF-g4-d4i" secondAttribute="top" id="uQu-rt-2BH"/>
                                     <constraint firstItem="Hml-eu-axZ" firstAttribute="centerY" secondItem="WUF-g4-d4i" secondAttribute="centerY" id="vXs-VP-N0i"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -99,16 +111,41 @@
             </objects>
             <point key="canvasLocation" x="1057" y="-27"/>
         </scene>
-        <!--View Controller-->
+        <!--Onboard Welcome Page Controller-->
         <scene sceneID="Z8W-sJ-AMr">
             <objects>
-                <viewController storyboardIdentifier="vc1" id="IaC-bq-DLi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc1" id="IaC-bq-DLi" customClass="OnboardWelcomePageController" customModule="Khana_Khas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zbE-hn-dL5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover, Cook, Delight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ur8-50-UP3">
+                                <rect key="frame" x="57.666666666666657" y="99" width="277.66666666666674" height="31.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pmq-tf-hp0">
+                                <rect key="frame" x="36.666666666666657" y="316" width="320" height="320"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pmq-tf-hp0" secondAttribute="height" multiplier="1:1" id="mp9-cT-55Z"/>
+                                    <constraint firstAttribute="width" constant="320" id="yMv-Ng-DcL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xZa-du-b93"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ur8-50-UP3" firstAttribute="centerX" secondItem="zbE-hn-dL5" secondAttribute="centerX" id="4Xd-ZG-Jba"/>
+                            <constraint firstItem="Pmq-tf-hp0" firstAttribute="centerY" secondItem="zbE-hn-dL5" secondAttribute="centerY" constant="50" id="YLV-zP-9n1"/>
+                            <constraint firstItem="Ur8-50-UP3" firstAttribute="top" secondItem="xZa-du-b93" secondAttribute="top" constant="40" id="cka-dI-VgB"/>
+                            <constraint firstItem="Pmq-tf-hp0" firstAttribute="centerX" secondItem="zbE-hn-dL5" secondAttribute="centerX" id="ton-eo-gqL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationContainer" destination="Pmq-tf-hp0" id="iRt-YF-jEm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WrG-Oo-719" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,7 +154,6 @@
         <!--Onboard Prefrence View Controller-->
         <scene sceneID="hXz-Gp-PNe">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Aph-1M-7pc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Onboard Pref" id="yOG-iF-FSs" customClass="OnboardPrefrenceViewController" customModule="Khana_Khas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QY6-eG-fgJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -188,6 +224,7 @@
                         <outlet property="titleLabel" destination="PgJ-sx-8iR" id="BEx-SI-bBK"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aph-1M-7pc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1080" y="720"/>
         </scene>

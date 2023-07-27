@@ -19,6 +19,9 @@
 		AD46E9A12A6B9E4E003D94AC /* Khana_KhasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E9A02A6B9E4E003D94AC /* Khana_KhasUITests.swift */; };
 		AD46E9A32A6B9E4E003D94AC /* Khana_KhasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E9A22A6B9E4E003D94AC /* Khana_KhasUITestsLaunchTests.swift */; };
 		AD46E9B12A6BA01D003D94AC /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD46E9B02A6BA01D003D94AC /* Onboard.storyboard */; };
+		AD8DA8912A72D65D0011B2B3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AD8DA8902A72D65D0011B2B3 /* Lottie */; };
+		AD8DA8942A72D6D50011B2B3 /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = AD8DA8932A72D6D50011B2B3 /* welcome.json */; };
+		AD8DA8962A72D6F70011B2B3 /* OnboardWelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8DA8952A72D6F70011B2B3 /* OnboardWelcomePageController.swift */; };
 		ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,8 @@
 		AD46E9A02A6B9E4E003D94AC /* Khana_KhasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khana_KhasUITests.swift; sourceTree = "<group>"; };
 		AD46E9A22A6B9E4E003D94AC /* Khana_KhasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khana_KhasUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AD46E9B02A6BA01D003D94AC /* Onboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboard.storyboard; sourceTree = "<group>"; };
+		AD8DA8932A72D6D50011B2B3 /* welcome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcome.json; sourceTree = "<group>"; };
+		AD8DA8952A72D6F70011B2B3 /* OnboardWelcomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardWelcomePageController.swift; sourceTree = "<group>"; };
 		ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPrefrenceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD8DA8912A72D65D0011B2B3 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +96,7 @@
 				AD111B582A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift */,
 				AD111B5A2A6BACC900FE38B5 /* OnboardPageViewController.swift */,
 				ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */,
+				AD8DA8952A72D6F70011B2B3 /* OnboardWelcomePageController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -117,6 +124,7 @@
 		AD46E97E2A6B9E4D003D94AC /* Khana Khas */ = {
 			isa = PBXGroup;
 			children = (
+				AD8DA8922A72D6B00011B2B3 /* Assets */,
 				AD46E9AF2A6B9E8B003D94AC /* Onboard */,
 				AD46E97F2A6B9E4D003D94AC /* AppDelegate.swift */,
 				AD46E9812A6B9E4D003D94AC /* SceneDelegate.swift */,
@@ -155,6 +163,14 @@
 			path = Onboard;
 			sourceTree = "<group>";
 		};
+		AD8DA8922A72D6B00011B2B3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AD8DA8932A72D6D50011B2B3 /* welcome.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,6 +187,9 @@
 			dependencies = (
 			);
 			name = "Khana Khas";
+			packageProductDependencies = (
+				AD8DA8902A72D65D0011B2B3 /* Lottie */,
+			);
 			productName = "Khana Khas";
 			productReference = AD46E97C2A6B9E4D003D94AC /* Khana Khas.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +262,9 @@
 				Base,
 			);
 			mainGroup = AD46E9732A6B9E4D003D94AC;
+			packageReferences = (
+				AD8DA88F2A72D65D0011B2B3 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = AD46E97D2A6B9E4D003D94AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +285,7 @@
 				AD46E9892A6B9E4E003D94AC /* Assets.xcassets in Resources */,
 				AD46E9B12A6BA01D003D94AC /* Onboard.storyboard in Resources */,
 				AD46E9872A6B9E4D003D94AC /* Main.storyboard in Resources */,
+				AD8DA8942A72D6D50011B2B3 /* welcome.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +316,7 @@
 				AD46E9802A6B9E4D003D94AC /* AppDelegate.swift in Sources */,
 				AD46E9822A6B9E4D003D94AC /* SceneDelegate.swift in Sources */,
 				AD111B5B2A6BACC900FE38B5 /* OnboardPageViewController.swift in Sources */,
+				AD8DA8962A72D6F70011B2B3 /* OnboardWelcomePageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +652,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AD8DA88F2A72D65D0011B2B3 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD8DA8902A72D65D0011B2B3 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD8DA88F2A72D65D0011B2B3 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AD46E9742A6B9E4D003D94AC /* Project object */;
 }

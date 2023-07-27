@@ -48,7 +48,6 @@ class OnboardGetStatedViewController: UIViewController {
     }
     
     func hidePageControl() {
-        
         self.parentViewWidth.isActive = false
         
         UIView.animate(withDuration: 0.5) {
@@ -59,6 +58,11 @@ class OnboardGetStatedViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
     }
+    
+    @IBAction func didpressNextButton(_ sender: Any) {
+        self.pageVC?.switchToNextPage()
+    }
+    
 }
 
 extension OnboardGetStatedViewController : UIPageViewControllerDelegate {

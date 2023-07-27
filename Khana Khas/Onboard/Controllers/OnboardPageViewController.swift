@@ -17,7 +17,6 @@ class OnboardPageViewController: UIPageViewController {
         self.dataSource = self
         let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
         let vc1 = storyboard.instantiateViewController(withIdentifier: "vc1")
-        vc1.view.backgroundColor = UIColor.purple
         vc1.title = "1"
         
         
@@ -32,6 +31,24 @@ class OnboardPageViewController: UIPageViewController {
         myViewControllers = [vc1, vc2, vc3]
     
         self.setViewControllers([vc1], direction: UIPageViewController.NavigationDirection.forward, animated: true)
+    }
+    
+    func switchToNextPage() {
+        guard (self.viewControllers != nil) else {
+            return
+        }
+        
+        let curr = self.myViewControllers?.firstIndex(of: viewControllers![0]) ?? 0;
+        
+        guard curr + 1 < self.myViewControllers?.count ?? 0 else {
+            return
+        }
+        let vc = self.myViewControllers?[curr + 1] as! UIViewController
+        
+        self.setViewControllers([vc], direction: UIPageViewController.NavigationDirection.forward, animated: true) { _ in
+            self.delegate?.pageViewController?(self, didFinishAnimating: true, previousViewControllers: [vc], transitionCompleted: true)
+        }
+        self.delegate?.pageViewController?(self, willTransitionTo: [vc])
     }
 }
 
