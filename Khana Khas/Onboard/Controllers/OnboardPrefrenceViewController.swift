@@ -48,7 +48,7 @@ class PrefrenceSelectionCellView : UITableViewCell {
     
     func update(title: String, selected: Bool) {
         if selected {
-            parentView.layer.borderColor = UIColor.systemBlue.cgColor
+            parentView.layer.borderColor = UIColor.systemIndigo.cgColor
         } else {
             parentView.layer.borderColor = UIColor.lightGray.cgColor
         }

@@ -60,7 +60,16 @@ class OnboardGetStatedViewController: UIViewController {
     }
     
     @IBAction func didpressNextButton(_ sender: Any) {
-        self.pageVC?.switchToNextPage()
+        if self.pageControl.currentPage == 2 {
+            PrefrenceManager.shared.set(bool: true, key: PrefrenceManager.PREF_KEY_ONBOARD_COMPLETE)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = storyboard.instantiateInitialViewController() {
+                self.navigationController?.setViewControllers([vc], animated: true)
+            }
+        } else {
+            self.pageVC?.switchToNextPage()
+        }
+        
     }
     
 }
@@ -82,6 +91,5 @@ extension OnboardGetStatedViewController : UIPageViewControllerDelegate {
         if let title = pageVC?.viewControllers?[0].title, let index = Int(title) {
             self.pageControl.currentPage = index - 1
         }
-        
     }
 }

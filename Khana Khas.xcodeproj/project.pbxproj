@@ -22,6 +22,9 @@
 		AD8DA8912A72D65D0011B2B3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AD8DA8902A72D65D0011B2B3 /* Lottie */; };
 		AD8DA8942A72D6D50011B2B3 /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = AD8DA8932A72D6D50011B2B3 /* welcome.json */; };
 		AD8DA8962A72D6F70011B2B3 /* OnboardWelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8DA8952A72D6F70011B2B3 /* OnboardWelcomePageController.swift */; };
+		ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */; };
+		ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */; };
+		ADB73DD22A74DF5B007D53E9 /* Entry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */; };
 		ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +64,9 @@
 		AD46E9B02A6BA01D003D94AC /* Onboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboard.storyboard; sourceTree = "<group>"; };
 		AD8DA8932A72D6D50011B2B3 /* welcome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcome.json; sourceTree = "<group>"; };
 		AD8DA8952A72D6F70011B2B3 /* OnboardWelcomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardWelcomePageController.swift; sourceTree = "<group>"; };
+		ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrenceManager.swift; sourceTree = "<group>"; };
+		ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entry.storyboard; sourceTree = "<group>"; };
 		ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPrefrenceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +130,7 @@
 		AD46E97E2A6B9E4D003D94AC /* Khana Khas */ = {
 			isa = PBXGroup;
 			children = (
+				ADB73DCC2A74D99E007D53E9 /* Managers */,
 				AD8DA8922A72D6B00011B2B3 /* Assets */,
 				AD46E9AF2A6B9E8B003D94AC /* Onboard */,
 				AD46E97F2A6B9E4D003D94AC /* AppDelegate.swift */,
@@ -133,6 +140,8 @@
 				AD46E9882A6B9E4E003D94AC /* Assets.xcassets */,
 				AD46E98A2A6B9E4E003D94AC /* LaunchScreen.storyboard */,
 				AD46E98D2A6B9E4E003D94AC /* Info.plist */,
+				ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */,
+				ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */,
 			);
 			path = "Khana Khas";
 			sourceTree = "<group>";
@@ -169,6 +178,14 @@
 				AD8DA8932A72D6D50011B2B3 /* welcome.json */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		ADB73DCC2A74D99E007D53E9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD46E98C2A6B9E4E003D94AC /* LaunchScreen.storyboard in Resources */,
+				ADB73DD22A74DF5B007D53E9 /* Entry.storyboard in Resources */,
 				AD46E9892A6B9E4E003D94AC /* Assets.xcassets in Resources */,
 				AD46E9B12A6BA01D003D94AC /* Onboard.storyboard in Resources */,
 				AD46E9872A6B9E4D003D94AC /* Main.storyboard in Resources */,
@@ -316,6 +334,8 @@
 				AD46E9802A6B9E4D003D94AC /* AppDelegate.swift in Sources */,
 				AD46E9822A6B9E4D003D94AC /* SceneDelegate.swift in Sources */,
 				AD111B5B2A6BACC900FE38B5 /* OnboardPageViewController.swift in Sources */,
+				ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */,
+				ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */,
 				AD8DA8962A72D6F70011B2B3 /* OnboardWelcomePageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
