@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0663662A7626B000C29E82 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0663652A7626B000C29E82 /* ChatTableViewCell.swift */; };
+		AD0663682A762E9A00C29E82 /* ChatRightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0663672A762E9A00C29E82 /* ChatRightTableViewCell.swift */; };
 		AD111B592A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD111B582A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift */; };
 		AD111B5B2A6BACC900FE38B5 /* OnboardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD111B5A2A6BACC900FE38B5 /* OnboardPageViewController.swift */; };
 		AD46E9802A6B9E4D003D94AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E97F2A6B9E4D003D94AC /* AppDelegate.swift */; };
 		AD46E9822A6B9E4D003D94AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E9812A6B9E4D003D94AC /* SceneDelegate.swift */; };
-		AD46E9842A6B9E4D003D94AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E9832A6B9E4D003D94AC /* ViewController.swift */; };
+		AD46E9842A6B9E4D003D94AC /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E9832A6B9E4D003D94AC /* MainTableViewController.swift */; };
 		AD46E9872A6B9E4D003D94AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD46E9852A6B9E4D003D94AC /* Main.storyboard */; };
 		AD46E9892A6B9E4E003D94AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD46E9882A6B9E4E003D94AC /* Assets.xcassets */; };
 		AD46E98C2A6B9E4E003D94AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD46E98A2A6B9E4E003D94AC /* LaunchScreen.storyboard */; };
@@ -46,12 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD0663652A7626B000C29E82 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		AD0663672A762E9A00C29E82 /* ChatRightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRightTableViewCell.swift; sourceTree = "<group>"; };
 		AD111B582A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardGetStatedViewController.swift; sourceTree = "<group>"; };
 		AD111B5A2A6BACC900FE38B5 /* OnboardPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageViewController.swift; sourceTree = "<group>"; };
 		AD46E97C2A6B9E4D003D94AC /* Khana Khas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Khana Khas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD46E97F2A6B9E4D003D94AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD46E9812A6B9E4D003D94AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD46E9832A6B9E4D003D94AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD46E9832A6B9E4D003D94AC /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		AD46E9862A6B9E4D003D94AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD46E9882A6B9E4E003D94AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD46E98B2A6B9E4E003D94AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,6 +100,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD0663622A76256F00C29E82 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AD0663632A76258400C29E82 /* Controllers */,
+				AD0663642A76267D00C29E82 /* Cells */,
+				AD46E9852A6B9E4D003D94AC /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AD0663632A76258400C29E82 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD46E9832A6B9E4D003D94AC /* MainTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AD0663642A76267D00C29E82 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AD0663652A7626B000C29E82 /* ChatTableViewCell.swift */,
+				AD0663672A762E9A00C29E82 /* ChatRightTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		AD111B572A6BAC6100FE38B5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,10 +164,9 @@
 				ADB73DCC2A74D99E007D53E9 /* Managers */,
 				AD8DA8922A72D6B00011B2B3 /* Assets */,
 				AD46E9AF2A6B9E8B003D94AC /* Onboard */,
+				AD0663622A76256F00C29E82 /* Main */,
 				AD46E97F2A6B9E4D003D94AC /* AppDelegate.swift */,
 				AD46E9812A6B9E4D003D94AC /* SceneDelegate.swift */,
-				AD46E9832A6B9E4D003D94AC /* ViewController.swift */,
-				AD46E9852A6B9E4D003D94AC /* Main.storyboard */,
 				AD46E9882A6B9E4E003D94AC /* Assets.xcassets */,
 				AD46E98A2A6B9E4E003D94AC /* LaunchScreen.storyboard */,
 				AD46E98D2A6B9E4E003D94AC /* Info.plist */,
@@ -329,12 +359,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD111B592A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift in Sources */,
+				AD0663682A762E9A00C29E82 /* ChatRightTableViewCell.swift in Sources */,
 				ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */,
-				AD46E9842A6B9E4D003D94AC /* ViewController.swift in Sources */,
+				AD46E9842A6B9E4D003D94AC /* MainTableViewController.swift in Sources */,
 				AD46E9802A6B9E4D003D94AC /* AppDelegate.swift in Sources */,
 				AD46E9822A6B9E4D003D94AC /* SceneDelegate.swift in Sources */,
 				AD111B5B2A6BACC900FE38B5 /* OnboardPageViewController.swift in Sources */,
 				ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */,
+				AD0663662A7626B000C29E82 /* ChatTableViewCell.swift in Sources */,
 				ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */,
 				AD8DA8962A72D6F70011B2B3 /* OnboardWelcomePageController.swift in Sources */,
 			);
