@@ -24,6 +24,7 @@
 		AD8DA8912A72D65D0011B2B3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AD8DA8902A72D65D0011B2B3 /* Lottie */; };
 		AD8DA8942A72D6D50011B2B3 /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = AD8DA8932A72D6D50011B2B3 /* welcome.json */; };
 		AD8DA8962A72D6F70011B2B3 /* OnboardWelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8DA8952A72D6F70011B2B3 /* OnboardWelcomePageController.swift */; };
+		ADB6C02C2A7E2223004D8E04 /* DifferenceKit in Frameworks */ = {isa = PBXBuildFile; productRef = ADB6C02B2A7E2223004D8E04 /* DifferenceKit */; };
 		ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */; };
 		ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */; };
 		ADB73DD22A74DF5B007D53E9 /* Entry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */; };
@@ -79,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB6C02C2A7E2223004D8E04 /* DifferenceKit in Frameworks */,
 				AD8DA8912A72D65D0011B2B3 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +238,7 @@
 			name = "Khana Khas";
 			packageProductDependencies = (
 				AD8DA8902A72D65D0011B2B3 /* Lottie */,
+				ADB6C02B2A7E2223004D8E04 /* DifferenceKit */,
 			);
 			productName = "Khana Khas";
 			productReference = AD46E97C2A6B9E4D003D94AC /* Khana Khas.app */;
@@ -311,6 +314,7 @@
 			mainGroup = AD46E9732A6B9E4D003D94AC;
 			packageReferences = (
 				AD8DA88F2A72D65D0011B2B3 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				ADB6C02A2A7E2223004D8E04 /* XCRemoteSwiftPackageReference "DifferenceKit" */,
 			);
 			productRefGroup = AD46E97D2A6B9E4D003D94AC /* Products */;
 			projectDirPath = "";
@@ -714,6 +718,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		ADB6C02A2A7E2223004D8E04 /* XCRemoteSwiftPackageReference "DifferenceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ra1028/DifferenceKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -721,6 +733,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AD8DA88F2A72D65D0011B2B3 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
+		};
+		ADB6C02B2A7E2223004D8E04 /* DifferenceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADB6C02A2A7E2223004D8E04 /* XCRemoteSwiftPackageReference "DifferenceKit" */;
+			productName = DifferenceKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
