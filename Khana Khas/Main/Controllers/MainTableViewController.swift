@@ -19,12 +19,11 @@ class MainTableViewController: UITableViewController {
 //        self.title = "Khana Khash"
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.addItem(item: ChatItem(id: 1, name: "right"))
+            self.addItem(item: ChatItem(id: 1, name: "left"))
             
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                self.addItem(item: ChatItem(id: 2, name: "left"))
-            }
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//                self.addItem(item: ChatItem(id: 2, name: "right"))
+//            }
         }
     }
     
@@ -69,6 +68,11 @@ extension MainTableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let customCell = cell as? ChatTableViewCell {
+            customCell.animateFromBottomLeft()
+        }
+    }
 }
 
 class ChatItem : Differentiable {
