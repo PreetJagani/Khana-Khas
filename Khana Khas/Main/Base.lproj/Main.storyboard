@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -99,6 +100,81 @@
                                     <outlet property="parentView" destination="mV9-EB-Sma" id="JUa-e4-hOu"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="chat options" rowHeight="94" id="RZd-Qs-1c6" userLabel="Chat Options" customClass="ChatOptionsTableViewCell" customModule="Khana_Khas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="195.33332824707031" width="393" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RZd-Qs-1c6" id="fPb-6Z-GF7">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="O8o-DB-JbS">
+                                            <rect key="frame" x="15.999999999999986" y="4" width="235.66666666666663" height="86"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="tkq-IH-AYN"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VjW-Xk-I4W">
+                                                <size key="itemSize" width="128" height="128"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="option" id="ESX-O4-fxe" userLabel="Option" customClass="ChatOptionCollectionViewCell" customModule="Khana_Khas" customModuleProvider="target">
+                                                    <rect key="frame" x="53.666666666666664" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6XT-ti-3bE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNN-Ep-ZNG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinner Recipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zeo-RY-4XG">
+                                                                        <rect key="frame" x="16" y="8" width="96" height="112"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="Zeo-RY-4XG" firstAttribute="top" secondItem="UNN-Ep-ZNG" secondAttribute="top" constant="8" id="3zG-cK-Zx4"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Zeo-RY-4XG" secondAttribute="trailing" constant="16" id="Qlg-A1-1B1"/>
+                                                                    <constraint firstItem="Zeo-RY-4XG" firstAttribute="leading" secondItem="UNN-Ep-ZNG" secondAttribute="leading" constant="16" id="Reb-Bz-gDe"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="Zeo-RY-4XG" secondAttribute="bottom" constant="8" id="mSl-JP-NFh"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="12"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="UNN-Ep-ZNG" secondAttribute="bottom" id="0Iy-Ig-RpM"/>
+                                                            <constraint firstItem="UNN-Ep-ZNG" firstAttribute="top" secondItem="6XT-ti-3bE" secondAttribute="top" id="WlZ-2b-ve5"/>
+                                                            <constraint firstItem="UNN-Ep-ZNG" firstAttribute="leading" secondItem="6XT-ti-3bE" secondAttribute="leading" id="r55-OY-7JH"/>
+                                                            <constraint firstAttribute="trailing" secondItem="UNN-Ep-ZNG" secondAttribute="trailing" id="sch-Bh-SzP"/>
+                                                        </constraints>
+                                                    </collectionViewCellContentView>
+                                                    <connections>
+                                                        <outlet property="lable" destination="Zeo-RY-4XG" id="bjD-52-W53"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="O8o-DB-JbS" firstAttribute="top" secondItem="fPb-6Z-GF7" secondAttribute="top" constant="4" id="2Sr-Ds-Osc"/>
+                                        <constraint firstAttribute="bottom" secondItem="O8o-DB-JbS" secondAttribute="bottom" constant="4" id="3sZ-zZ-rRQ"/>
+                                        <constraint firstItem="O8o-DB-JbS" firstAttribute="leading" secondItem="fPb-6Z-GF7" secondAttribute="leading" constant="16" id="D4t-r7-XtR"/>
+                                        <constraint firstItem="O8o-DB-JbS" firstAttribute="width" secondItem="fPb-6Z-GF7" secondAttribute="width" multiplier="0.6" priority="999" id="Ntg-sj-dWx"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="O8o-DB-JbS" id="9Jm-89-8TC"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="tBj-LT-VW7" id="0gk-0z-aI9"/>
@@ -112,6 +188,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

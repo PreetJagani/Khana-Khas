@@ -21,6 +21,9 @@
 		AD46E9A12A6B9E4E003D94AC /* Khana_KhasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E9A02A6B9E4E003D94AC /* Khana_KhasUITests.swift */; };
 		AD46E9A32A6B9E4E003D94AC /* Khana_KhasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E9A22A6B9E4E003D94AC /* Khana_KhasUITestsLaunchTests.swift */; };
 		AD46E9B12A6BA01D003D94AC /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD46E9B02A6BA01D003D94AC /* Onboard.storyboard */; };
+		AD8A369A2A88B989007842FE /* ChatOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8A36992A88B989007842FE /* ChatOptionsTableViewCell.swift */; };
+		AD8A369E2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8A369D2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift */; };
+		AD8C11DF2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8C11DE2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift */; };
 		AD8DA8912A72D65D0011B2B3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AD8DA8902A72D65D0011B2B3 /* Lottie */; };
 		AD8DA8942A72D6D50011B2B3 /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = AD8DA8932A72D6D50011B2B3 /* welcome.json */; };
 		AD8DA8962A72D6F70011B2B3 /* OnboardWelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8DA8952A72D6F70011B2B3 /* OnboardWelcomePageController.swift */; };
@@ -67,6 +70,9 @@
 		AD46E9A02A6B9E4E003D94AC /* Khana_KhasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khana_KhasUITests.swift; sourceTree = "<group>"; };
 		AD46E9A22A6B9E4E003D94AC /* Khana_KhasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khana_KhasUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AD46E9B02A6BA01D003D94AC /* Onboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboard.storyboard; sourceTree = "<group>"; };
+		AD8A36992A88B989007842FE /* ChatOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOptionsTableViewCell.swift; sourceTree = "<group>"; };
+		AD8A369D2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOptionsCollectionViewLayout.swift; sourceTree = "<group>"; };
+		AD8C11DE2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD8DA8932A72D6D50011B2B3 /* welcome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcome.json; sourceTree = "<group>"; };
 		AD8DA8952A72D6F70011B2B3 /* OnboardWelcomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardWelcomePageController.swift; sourceTree = "<group>"; };
 		ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrenceManager.swift; sourceTree = "<group>"; };
@@ -123,8 +129,11 @@
 		AD0663642A76267D00C29E82 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				AD8A369C2A88C7D7007842FE /* Layouts */,
 				AD0663652A7626B000C29E82 /* ChatTableViewCell.swift */,
 				AD0663672A762E9A00C29E82 /* ChatRightTableViewCell.swift */,
+				AD8A36992A88B989007842FE /* ChatOptionsTableViewCell.swift */,
+				AD8C11DE2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -202,6 +211,14 @@
 				AD46E9B02A6BA01D003D94AC /* Onboard.storyboard */,
 			);
 			path = Onboard;
+			sourceTree = "<group>";
+		};
+		AD8A369C2A88C7D7007842FE /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				AD8A369D2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift */,
+			);
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 		AD8DA8922A72D6B00011B2B3 /* Assets */ = {
@@ -366,12 +383,15 @@
 				AD0663682A762E9A00C29E82 /* ChatRightTableViewCell.swift in Sources */,
 				ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */,
 				AD46E9842A6B9E4D003D94AC /* MainTableViewController.swift in Sources */,
+				AD8A369A2A88B989007842FE /* ChatOptionsTableViewCell.swift in Sources */,
 				AD46E9802A6B9E4D003D94AC /* AppDelegate.swift in Sources */,
 				AD46E9822A6B9E4D003D94AC /* SceneDelegate.swift in Sources */,
+				AD8C11DF2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift in Sources */,
 				AD111B5B2A6BACC900FE38B5 /* OnboardPageViewController.swift in Sources */,
 				ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */,
 				AD0663662A7626B000C29E82 /* ChatTableViewCell.swift in Sources */,
 				ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */,
+				AD8A369E2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift in Sources */,
 				AD8DA8962A72D6F70011B2B3 /* OnboardWelcomePageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

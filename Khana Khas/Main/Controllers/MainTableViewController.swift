@@ -21,9 +21,9 @@ class MainTableViewController: UITableViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.addItem(item: ChatItem(id: 1, name: "left"))
             
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//                self.addItem(item: ChatItem(id: 2, name: "right"))
-//            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.addItem(item: ChatItem(id: 2, name: "options"))
+            }
         }
     }
     
@@ -62,6 +62,8 @@ extension MainTableViewController {
         
         if item.name == "left" {
             cell = tableView.dequeueReusableCell(withIdentifier: "chat")!
+        } else if item.name == "options" {
+            cell = tableView.dequeueReusableCell(withIdentifier: "chat options")!
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "chat right")!
         }
@@ -72,6 +74,15 @@ extension MainTableViewController {
         if let customCell = cell as? ChatTableViewCell {
             customCell.animateFromBottomLeft()
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let item = self.items[indexPath.row]
+        
+        if (item.name == "options") {
+            return 200
+        }
+        return UITableView.automaticDimension
     }
 }
 
