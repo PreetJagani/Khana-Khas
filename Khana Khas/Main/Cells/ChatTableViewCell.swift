@@ -27,13 +27,13 @@ class ChatTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func animateFromBottomLeft() {
+    func animateFromBottomLeft(completion: @escaping (Bool) -> Void) {
         UIView.animate(withDuration: 0.5, delay: 0, options: .transitionCurlDown, animations: {
             self.leading.constant = 16
             self.top.constant = 4
             self.alpha = 1
             self.layoutIfNeeded()
-        }, completion: nil)
+        }, completion: completion)
         
     }
 }

@@ -7,17 +7,6 @@
 
 import UIKit
 
-class ChatOption {
-    
-    let name : String
-    let rowNumber : Int
-    
-    init(name: String, rowNumber: Int) {
-        self.name = name
-        self.rowNumber = rowNumber
-    }
-}
-
 class ChatOptionsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -54,7 +43,7 @@ class ChatOptionsTableViewCell: UITableViewCell {
     }
     
     func addOption(name: String, row: Int) {
-        let option = ChatOption(name: name, rowNumber: row)
+        let option = ChatOption(text: name, rowNumber: row)
         
         let currCount = rowCountCache[row] ?? 0
         rowCountCache[row] = currCount + 1
@@ -76,7 +65,7 @@ extension ChatOptionsTableViewCell : UICollectionViewDataSource, UICollectionVie
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "option", for: indexPath) as! ChatOptionCollectionViewCell
         
-        cell.lable.text = item.name
+        cell.lable.text = item.text
         
         return cell
     }
