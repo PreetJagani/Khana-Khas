@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="answer" id="ExO-c4-ocI" userLabel="Answer" customClass="ChatTableViewCell" customModule="Khana_Khas" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="answer" id="ExO-c4-ocI" userLabel="Answer" customClass="ChatAnswerTableViewCell" customModule="Khana_Khas" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="72.666664123535156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ExO-c4-ocI" id="OUD-jb-adI">
@@ -57,10 +57,11 @@
                                 <connections>
                                     <outlet property="leading" destination="1HM-d2-VCz" id="Thg-5O-oHV"/>
                                     <outlet property="parentView" destination="m5E-VV-l7l" id="sDv-EN-OZD"/>
+                                    <outlet property="titlteLable" destination="3fa-de-PB1" id="wey-pU-stk"/>
                                     <outlet property="top" destination="kxJ-Te-G0i" id="qbL-0n-faW"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="quetion" id="DAl-vN-pZN" userLabel="Quetion" customClass="ChatRightTableViewCell" customModule="Khana_Khas" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="quetion" id="DAl-vN-pZN" userLabel="Quetion" customClass="ChatQuetionTableViewCell" customModule="Khana_Khas" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="122.66666412353516" width="393" height="72.666664123535156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DAl-vN-pZN" id="qPj-Ik-rgk">
@@ -98,6 +99,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="parentView" destination="mV9-EB-Sma" id="JUa-e4-hOu"/>
+                                    <outlet property="titleLabel" destination="klA-w1-rFl" id="ccR-KM-u92"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="options" rowHeight="94" id="RZd-Qs-1c6" userLabel="Options" customClass="ChatOptionsTableViewCell" customModule="Khana_Khas" customModuleProvider="target">

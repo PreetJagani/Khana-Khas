@@ -16,10 +16,10 @@ class ChatViewModel: NSObject {
     func start() {
         self.pendingItems.append(ChatAnswer(id: 0, text: "Good Morning! How Can I assist you today?"))
         self.pendingItems.append(ChatOptions(id: 1, text: "options", options: [
-            ChatOption(text: "Breakfast", rowNumber: 0),
-            ChatOption(text: "Snacks", rowNumber: 1),
-            ChatOption(text: "Dinner", rowNumber: 2),
-            ChatOption(text: "Lunch", rowNumber: 2)
+            ChatOption(text: "🥞 Breakfast", rowNumber: 0),
+            ChatOption(text: "🥪 Snacks", rowNumber: 1),
+            ChatOption(text: "🥘 Dinner", rowNumber: 2),
+            ChatOption(text: "🍽️ Lunch", rowNumber: 2)
         ], rows: 3))
         self.appendNextItemIfNeeded()
     }

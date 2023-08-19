@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD0663662A7626B000C29E82 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0663652A7626B000C29E82 /* ChatTableViewCell.swift */; };
-		AD0663682A762E9A00C29E82 /* ChatRightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0663672A762E9A00C29E82 /* ChatRightTableViewCell.swift */; };
+		AD0663662A7626B000C29E82 /* ChatAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0663652A7626B000C29E82 /* ChatAnswerTableViewCell.swift */; };
+		AD0663682A762E9A00C29E82 /* ChatQuetionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0663672A762E9A00C29E82 /* ChatQuetionTableViewCell.swift */; };
 		AD111B592A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD111B582A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift */; };
 		AD111B5B2A6BACC900FE38B5 /* OnboardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD111B5A2A6BACC900FE38B5 /* OnboardPageViewController.swift */; };
 		AD46E9802A6B9E4D003D94AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E97F2A6B9E4D003D94AC /* AppDelegate.swift */; };
@@ -57,8 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AD0663652A7626B000C29E82 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
-		AD0663672A762E9A00C29E82 /* ChatRightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRightTableViewCell.swift; sourceTree = "<group>"; };
+		AD0663652A7626B000C29E82 /* ChatAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAnswerTableViewCell.swift; sourceTree = "<group>"; };
+		AD0663672A762E9A00C29E82 /* ChatQuetionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatQuetionTableViewCell.swift; sourceTree = "<group>"; };
 		AD111B582A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardGetStatedViewController.swift; sourceTree = "<group>"; };
 		AD111B5A2A6BACC900FE38B5 /* OnboardPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageViewController.swift; sourceTree = "<group>"; };
 		AD46E97C2A6B9E4D003D94AC /* Khana Khas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Khana Khas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,8 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				AD8A369C2A88C7D7007842FE /* Layouts */,
-				AD0663652A7626B000C29E82 /* ChatTableViewCell.swift */,
-				AD0663672A762E9A00C29E82 /* ChatRightTableViewCell.swift */,
+				AD0663652A7626B000C29E82 /* ChatAnswerTableViewCell.swift */,
+				AD0663672A762E9A00C29E82 /* ChatQuetionTableViewCell.swift */,
 				AD8A36992A88B989007842FE /* ChatOptionsTableViewCell.swift */,
 				AD8C11DE2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift */,
 			);
@@ -411,7 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD111B592A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift in Sources */,
-				AD0663682A762E9A00C29E82 /* ChatRightTableViewCell.swift in Sources */,
+				AD0663682A762E9A00C29E82 /* ChatQuetionTableViewCell.swift in Sources */,
 				AD8761002A8BB8C500419784 /* ChatOption.swift in Sources */,
 				ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */,
 				AD46E9842A6B9E4D003D94AC /* MainTableViewController.swift in Sources */,
@@ -423,7 +423,7 @@
 				AD111B5B2A6BACC900FE38B5 /* OnboardPageViewController.swift in Sources */,
 				ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */,
 				AD8760FE2A8BB8AF00419784 /* ChatAnswer.swift in Sources */,
-				AD0663662A7626B000C29E82 /* ChatTableViewCell.swift in Sources */,
+				AD0663662A7626B000C29E82 /* ChatAnswerTableViewCell.swift in Sources */,
 				ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */,
 				AD8A369E2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift in Sources */,
 				AD8760FC2A8BB8A000419784 /* ChatQuetion.swift in Sources */,

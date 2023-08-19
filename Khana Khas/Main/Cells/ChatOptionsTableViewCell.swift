@@ -26,24 +26,23 @@ class ChatOptionsTableViewCell: UITableViewCell {
             layout.delegate = self
             self.collectionView.collectionViewLayout = layout
         }
-        self.refresh()
+//        self.refresh()
     }
     
-    func refresh() {
+    func refresh(options: ChatOptions) {
         items.removeAll()
         rowCountCache = [:]
         numRows = 0
         
-        self.addOption(name: "Breakfast", row: 0)
-        self.addOption(name: "Snacks", row: 1)
-        self.addOption(name: "Dinner", row: 2)
-        self.addOption(name: "Lunch", row: 2)
+        options.options.forEach { option in
+            self.addOption(option: option)
+        }
         
         layout?.rowsCount = numRows + 1
     }
     
-    func addOption(name: String, row: Int) {
-        let option = ChatOption(text: name, rowNumber: row)
+    func addOption(option: ChatOption) {
+        let row = option.rowNumber
         
         let currCount = rowCountCache[row] ?? 0
         rowCountCache[row] = currCount + 1

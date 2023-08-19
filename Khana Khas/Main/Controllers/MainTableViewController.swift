@@ -45,17 +45,23 @@ extension MainTableViewController {
         let item = self.items[indexPath.row]
         
         if item.isKind(of: ChatAnswer.self) {
+            let answer = item as! ChatAnswer
             cell = tableView.dequeueReusableCell(withIdentifier: "answer")!
+            (cell as! ChatAnswerTableViewCell).refresh(text: answer.text)
         } else if item.isKind(of: ChatQuetion.self) {
+            let quetion = item as! ChatQuetion
             cell = tableView.dequeueReusableCell(withIdentifier: "quetion")!
+            (cell as! ChatQuetionTableViewCell).refresh(text: quetion.text)
         } else {
+            let options = item as! ChatOptions
             cell = tableView.dequeueReusableCell(withIdentifier: "options")!
+            (cell as! ChatOptionsTableViewCell).refresh(options: options)
         }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let customCell = cell as? ChatTableViewCell {
+        if let customCell = cell as? ChatAnswerTableViewCell {
             customCell.animateFromBottomLeft { _ in
                 self.model?.appendNextItemIfNeeded(completion: { refresh in
                     if refresh {
