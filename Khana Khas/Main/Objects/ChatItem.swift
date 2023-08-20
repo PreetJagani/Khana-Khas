@@ -11,6 +11,8 @@ import DifferenceKit
 
 class ChatItem : NSObject, Differentiable {
     
+    static let loadingItem : ChatLoadingItem = ChatLoadingItem(id: -1, text: "Loading")
+    
     let id: Int
     let text: String
     
@@ -25,5 +27,12 @@ class ChatItem : NSObject, Differentiable {
 
     func isContentEqual(to source: ChatItem) -> Bool {
         return self.text == source.text
+    }
+}
+
+class ChatLoadingItem: ChatItem {
+    
+    fileprivate override init(id: Int, text: String) {
+        super.init(id: id, text: text)
     }
 }

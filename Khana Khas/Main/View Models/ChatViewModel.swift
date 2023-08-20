@@ -66,7 +66,12 @@ class ChatViewModel: NSObject {
     }
     
     func generateAnswer(option: ChatOption) {
+        self.pendingItems.append(ChatItem.loadingItem)
+        self.appendNextItemIfNeeded()
         FoodSuggetionManager.shared.suggestFood(promt: "") { suggetion in
+            self.pendingItems.remove(at: self.currIndex)
+            self.items.remove(at: self.currIndex)
+            self.currIndex -= 1
             self.pendingItems.append(ChatAnswer(id: self.nextId(), text: suggetion))
             self.appendNextItemIfNeeded()
         }

@@ -178,6 +178,82 @@
                                     <outlet property="collectionView" destination="O8o-DB-JbS" id="9Jm-89-8TC"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="loading" rowHeight="48" id="Uro-l4-163" userLabel="Loading" customClass="ChatLoadingTableViewCell" customModule="Khana_Khas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="289.33332824707031" width="393" height="48"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uro-l4-163" id="P7u-f2-5yU">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j4m-9b-N3G">
+                                            <rect key="frame" x="16" y="0.0" width="78" height="48"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibx-oa-5wJ" userLabel="One">
+                                                    <rect key="frame" x="16" y="19" width="10" height="10"/>
+                                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="3pz-aG-Htx"/>
+                                                        <constraint firstAttribute="width" secondItem="ibx-oa-5wJ" secondAttribute="height" multiplier="1:1" id="4i7-FJ-qYf"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIv-EW-FhK" userLabel="Two">
+                                                    <rect key="frame" x="34" y="19" width="10" height="10"/>
+                                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="RIv-EW-FhK" secondAttribute="height" multiplier="1:1" id="A6S-MD-cyw"/>
+                                                        <constraint firstAttribute="width" constant="10" id="X7z-eV-A7b"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5O-se-fnN" userLabel="Three">
+                                                    <rect key="frame" x="52" y="19" width="10" height="10"/>
+                                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="T5O-se-fnN" secondAttribute="height" multiplier="1:1" id="Cfz-xZ-Kq3"/>
+                                                        <constraint firstAttribute="width" constant="10" id="jGh-e8-Mwo"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="T5O-se-fnN" firstAttribute="width" secondItem="T5O-se-fnN" secondAttribute="height" multiplier="1:1" id="Tjz-ay-kEp"/>
+                                                <constraint firstAttribute="height" constant="36" id="Ylm-qL-Scw"/>
+                                                <constraint firstItem="RIv-EW-FhK" firstAttribute="width" secondItem="RIv-EW-FhK" secondAttribute="height" multiplier="1:1" id="sxM-h7-PIC"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="12" left="16" bottom="12" right="16"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="j4m-9b-N3G" firstAttribute="leading" secondItem="P7u-f2-5yU" secondAttribute="leading" constant="16" id="6Lb-oI-9cR"/>
+                                        <constraint firstAttribute="bottom" secondItem="j4m-9b-N3G" secondAttribute="bottom" id="EdA-BT-o66"/>
+                                        <constraint firstItem="j4m-9b-N3G" firstAttribute="top" secondItem="P7u-f2-5yU" secondAttribute="top" id="QH9-IM-9gT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="one" destination="ibx-oa-5wJ" id="ShH-BP-uKy"/>
+                                    <outlet property="three" destination="T5O-se-fnN" id="Bxf-Ur-GDT"/>
+                                    <outlet property="two" destination="RIv-EW-FhK" id="IKk-QJ-L2g"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="tBj-LT-VW7" id="0gk-0z-aI9"/>
@@ -191,6 +267,12 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

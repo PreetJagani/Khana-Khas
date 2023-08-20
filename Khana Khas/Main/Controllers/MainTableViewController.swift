@@ -25,8 +25,11 @@ class MainTableViewController: UITableViewController {
             let newItems = model.items
             let changeset = StagedChangeset(source: self.items, target: newItems)
             self.tableView.reload(using: changeset, with: .fade) { data in
-                self.items = newItems
+                self.items = data
             }
+//            self.tableView.reload(using: changeset, deleteSectionsAnimation: .top, insertSectionsAnimation: .bottom, reloadSectionsAnimation: .fade, deleteRowsAnimation: .top, insertRowsAnimation: .bottom, reloadRowsAnimation: .fade) { data in
+//                self.items = data
+//            }
         }
     }
 }
@@ -50,13 +53,15 @@ extension MainTableViewController {
             let quetion = item as! ChatQuetion
             cell = tableView.dequeueReusableCell(withIdentifier: "quetion")!
             (cell as! ChatQuetionTableViewCell).refresh(text: quetion.text)
-        } else {
+        } else if item.isKind(of: ChatOptions.self) {
             let options = item as! ChatOptions
             cell = tableView.dequeueReusableCell(withIdentifier: "options")!
             if let cell = cell as? ChatOptionsTableViewCell {
                 cell.optionsDelegate = self
                 cell.refresh(options: options)
             }
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: "loading")!
         }
         return cell
     }
