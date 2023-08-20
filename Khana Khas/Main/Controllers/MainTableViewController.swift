@@ -16,10 +16,8 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         model = ChatViewModel()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.model?.start()
-            self.refresh()
-        }
+        model?.modelDelegate = self
+        self.model?.start()
     }
     
     func refresh() {
@@ -66,18 +64,10 @@ extension MainTableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let customCell = cell as? ChatAnswerTableViewCell {
             customCell.animateFromBottomLeft { _ in
-                self.model?.appendNextItemIfNeeded(completion: { refresh in
-                    if refresh {
-                        self.refresh()
-                    }
-                })
+                self.model?.appendNextItemIfNeeded()
             }
         } else {
-            model?.appendNextItemIfNeeded(completion: { refresh in
-                if refresh {
-                    self.refresh()
-                }
-            })
+            model?.appendNextItemIfNeeded()
         }
     }
     
@@ -92,12 +82,14 @@ extension MainTableViewController {
     }
 }
 
-extension MainTableViewController : ChatOptionDelegate {
+extension MainTableViewController : ChatViewModelDelegate, ChatOptionDelegate {
+    
+    func dataUpdated() {
+        self.refresh()
+    }
     
     func didSelectOption(option: ChatOption) {
-        model?.selectChatOption(option: option, completion: { complete in
-            self.refresh()
-        })
+        model?.generateQuetion(option: option)
     }
 }
 

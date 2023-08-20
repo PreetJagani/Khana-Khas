@@ -16,7 +16,6 @@ class ChatOptionsTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     var items : [ChatOption] = []
     var rowCountCache : [Int : Int] = [:]
-    var numRows : Int = 0
     var layout : ChatOptionsCollectionViewLayout?
     var selectedIndex = -1
     weak var optionsDelegate : ChatOptionDelegate?
@@ -38,13 +37,12 @@ class ChatOptionsTableViewCell: UITableViewCell {
     func refresh(options: ChatOptions) {
         items.removeAll()
         rowCountCache = [:]
-        numRows = 0
         
         options.options.forEach { option in
             self.addOption(option: option)
         }
         
-        layout?.rowsCount = numRows + 1
+        layout?.rowsCount = options.rows + 1
     }
     
     func addOption(option: ChatOption) {
@@ -52,7 +50,6 @@ class ChatOptionsTableViewCell: UITableViewCell {
         
         let currCount = rowCountCache[row] ?? 0
         rowCountCache[row] = currCount + 1
-        numRows = max(row, numRows)
         
         items.append(option)
     }
