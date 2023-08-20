@@ -70,8 +70,8 @@ extension MainTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let customCell = cell as? ChatAnswerTableViewCell {
-            customCell.animateFromBottomLeft { _ in
+        if let customCell = cell as? ChatTableViewCell {
+            customCell.animateFromBottom { _ in
                 self.model?.appendNextItemIfNeeded()
             }
         } else {

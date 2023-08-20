@@ -31,7 +31,6 @@ class ChatOptionsTableViewCell: UITableViewCell {
             layout.delegate = self
             self.collectionView.collectionViewLayout = layout
         }
-//        self.refresh()
     }
     
     func refresh(options: ChatOptions) {
@@ -68,13 +67,7 @@ extension ChatOptionsTableViewCell : UICollectionViewDataSource, UICollectionVie
         let selected = self.selectedIndex == indexPath.row
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "option", for: indexPath) as! ChatOptionCollectionViewCell
-        
-        cell.lable.text = item.text
-        if selected {
-            cell.parent.layer.backgroundColor = UIColor.systemGray3.cgColor
-        } else {
-            cell.parent.layer.backgroundColor = UIColor.secondarySystemBackground.cgColor
-        }
+        cell.update(text: item.text, selected: selected)
         
         return cell
     }

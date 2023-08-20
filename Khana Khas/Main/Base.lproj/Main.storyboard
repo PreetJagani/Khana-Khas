@@ -57,7 +57,7 @@
                                     <outlet property="leading" destination="1HM-d2-VCz" id="Thg-5O-oHV"/>
                                     <outlet property="parentView" destination="m5E-VV-l7l" id="sDv-EN-OZD"/>
                                     <outlet property="titlteLable" destination="3fa-de-PB1" id="wey-pU-stk"/>
-                                    <outlet property="top" destination="kxJ-Te-G0i" id="qbL-0n-faW"/>
+                                    <outlet property="top" destination="kxJ-Te-G0i" id="lnb-xx-X1p"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="quetion" id="DAl-vN-pZN" userLabel="Quetion" customClass="ChatQuetionTableViewCell" customModule="Khana_Khas" customModuleProvider="target">
@@ -93,12 +93,13 @@
                                         <constraint firstItem="mV9-EB-Sma" firstAttribute="top" secondItem="qPj-Ik-rgk" secondAttribute="top" constant="4" id="FXl-Qo-h5n"/>
                                         <constraint firstItem="mV9-EB-Sma" firstAttribute="width" secondItem="qPj-Ik-rgk" secondAttribute="width" multiplier="0.7" priority="999" id="UmS-ff-f7G"/>
                                         <constraint firstAttribute="trailing" secondItem="mV9-EB-Sma" secondAttribute="trailing" constant="16" id="jJk-ZX-nlg"/>
-                                        <constraint firstAttribute="bottom" secondItem="mV9-EB-Sma" secondAttribute="bottom" constant="4" id="oCC-XB-atm"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mV9-EB-Sma" secondAttribute="bottom" constant="4" id="oCC-XB-atm"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="parentView" destination="mV9-EB-Sma" id="JUa-e4-hOu"/>
                                     <outlet property="titleLabel" destination="klA-w1-rFl" id="ccR-KM-u92"/>
+                                    <outlet property="top" destination="FXl-Qo-h5n" id="agH-ze-8mD"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="options" rowHeight="94" id="RZd-Qs-1c6" userLabel="Options" customClass="ChatOptionsTableViewCell" customModule="Khana_Khas" customModuleProvider="target">

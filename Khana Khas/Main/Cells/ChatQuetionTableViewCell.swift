@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChatQuetionTableViewCell: UITableViewCell {
+class ChatQuetionTableViewCell: ChatTableViewCell {
 
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!

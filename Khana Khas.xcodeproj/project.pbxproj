@@ -39,6 +39,7 @@
 		ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */; };
 		ADB73DD22A74DF5B007D53E9 /* Entry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */; };
 		ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */; };
+		ADF27DD92A92186B0035B1A4 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF27DD82A92186B0035B1A4 /* ChatTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entry.storyboard; sourceTree = "<group>"; };
 		ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPrefrenceViewController.swift; sourceTree = "<group>"; };
+		ADF27DD82A92186B0035B1A4 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8A369C2A88C7D7007842FE /* Layouts */,
+				ADF27DD82A92186B0035B1A4 /* ChatTableViewCell.swift */,
 				AD0663652A7626B000C29E82 /* ChatAnswerTableViewCell.swift */,
 				AD0663672A762E9A00C29E82 /* ChatQuetionTableViewCell.swift */,
 				AD8A36992A88B989007842FE /* ChatOptionsTableViewCell.swift */,
@@ -421,6 +424,7 @@
 				AD0663682A762E9A00C29E82 /* ChatQuetionTableViewCell.swift in Sources */,
 				AD8761002A8BB8C500419784 /* ChatOption.swift in Sources */,
 				ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */,
+				ADF27DD92A92186B0035B1A4 /* ChatTableViewCell.swift in Sources */,
 				AD46E9842A6B9E4D003D94AC /* MainTableViewController.swift in Sources */,
 				AD5AC07C2A91E42F00E4A4F9 /* ChatLoadingTableViewCell.swift in Sources */,
 				AD8A369A2A88B989007842FE /* ChatOptionsTableViewCell.swift in Sources */,
