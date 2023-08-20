@@ -16,7 +16,7 @@ class FoodSuggetionManager: NSObject {
     }
     
     func suggestFood(promt: String, completion: @escaping (String) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             completion("""
                         Dal Dhokli:
                         Dal Dhokli is a comforting one-pot dish that combines soft wheat flour dumplings (dhokli) with a spiced lentil soup (dal). The dumplings are simmered in the dal until they're cooked through, creating a hearty and flavorful meal.

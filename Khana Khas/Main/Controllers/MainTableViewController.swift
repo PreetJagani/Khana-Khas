@@ -26,6 +26,9 @@ class MainTableViewController: UITableViewController {
             let changeset = StagedChangeset(source: self.items, target: newItems)
             self.tableView.reload(using: changeset, with: .fade) { data in
                 self.items = data
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    self.tableView.scrollToRow(at: IndexPath(row: self.items.count - 1, section: 0), at: .bottom, animated: true)
+                }
             }
 //            self.tableView.reload(using: changeset, deleteSectionsAnimation: .top, insertSectionsAnimation: .bottom, reloadSectionsAnimation: .fade, deleteRowsAnimation: .top, insertRowsAnimation: .bottom, reloadRowsAnimation: .fade) { data in
 //                self.items = data

@@ -43,7 +43,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="3fa-de-PB1" secondAttribute="bottom" constant="12" id="Vsr-kL-kEy"/>
                                                 <constraint firstAttribute="trailing" secondItem="3fa-de-PB1" secondAttribute="trailing" constant="16" id="YSx-H1-DWX"/>
                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="gka-ci-w0B"/>
-                                                <constraint firstAttribute="height" constant="64.670000000000002" id="tj4-TH-NDM"/>
                                             </constraints>
                                         </view>
                                     </subviews>
