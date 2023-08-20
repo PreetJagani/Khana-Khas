@@ -25,10 +25,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5E-VV-l7l">
-                                            <rect key="frame" x="15.999999999999986" y="4" width="235.66666666666663" height="64.666666666666671"/>
+                                            <rect key="frame" x="16" y="4" width="275" height="64.666666666666671"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good morning! How can I assist you today?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fa-de-PB1">
-                                                    <rect key="frame" x="16" y="11.999999999999996" width="203.66666666666666" height="40.666666666666657"/>
+                                                    <rect key="frame" x="16" y="11.999999999999996" width="243" height="40.666666666666657"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -49,7 +49,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="m5E-VV-l7l" firstAttribute="leading" secondItem="OUD-jb-adI" secondAttribute="leading" constant="16" id="1HM-d2-VCz"/>
-                                        <constraint firstItem="m5E-VV-l7l" firstAttribute="width" secondItem="OUD-jb-adI" secondAttribute="width" multiplier="0.6" priority="999" id="37W-pi-WU0"/>
+                                        <constraint firstItem="m5E-VV-l7l" firstAttribute="width" secondItem="OUD-jb-adI" secondAttribute="width" multiplier="0.7" priority="999" id="37W-pi-WU0"/>
                                         <constraint firstItem="m5E-VV-l7l" firstAttribute="top" secondItem="OUD-jb-adI" secondAttribute="top" constant="4" id="kxJ-Te-G0i"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="m5E-VV-l7l" secondAttribute="bottom" constant="4" id="o2R-g0-EJS"/>
                                     </constraints>
@@ -69,10 +69,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mV9-EB-Sma">
-                                            <rect key="frame" x="141.33333333333337" y="4" width="235.66666666666663" height="64.666666666666671"/>
+                                            <rect key="frame" x="102" y="4" width="275" height="64.666666666666671"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Could you please suggest a dinner recipe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klA-w1-rFl">
-                                                    <rect key="frame" x="16" y="11.999999999999996" width="203.66666666666666" height="40.666666666666657"/>
+                                                    <rect key="frame" x="16" y="11.999999999999996" width="243" height="40.666666666666657"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -92,7 +92,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="mV9-EB-Sma" firstAttribute="top" secondItem="qPj-Ik-rgk" secondAttribute="top" constant="4" id="FXl-Qo-h5n"/>
-                                        <constraint firstItem="mV9-EB-Sma" firstAttribute="width" secondItem="qPj-Ik-rgk" secondAttribute="width" multiplier="0.6" priority="999" id="UmS-ff-f7G"/>
+                                        <constraint firstItem="mV9-EB-Sma" firstAttribute="width" secondItem="qPj-Ik-rgk" secondAttribute="width" multiplier="0.7" priority="999" id="UmS-ff-f7G"/>
                                         <constraint firstAttribute="trailing" secondItem="mV9-EB-Sma" secondAttribute="trailing" constant="16" id="jJk-ZX-nlg"/>
                                         <constraint firstAttribute="bottom" secondItem="mV9-EB-Sma" secondAttribute="bottom" constant="4" id="oCC-XB-atm"/>
                                     </constraints>
@@ -110,7 +110,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="O8o-DB-JbS">
-                                            <rect key="frame" x="15.999999999999986" y="4" width="235.66666666666663" height="86"/>
+                                            <rect key="frame" x="16" y="4" width="275" height="86"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="tkq-IH-AYN"/>
@@ -123,7 +123,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="option" id="ESX-O4-fxe" userLabel="Option" customClass="ChatOptionCollectionViewCell" customModule="Khana_Khas" customModuleProvider="target">
-                                                    <rect key="frame" x="53.666666666666664" y="0.0" width="128" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6XT-ti-3bE">
                                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -161,6 +161,7 @@
                                                     </collectionViewCellContentView>
                                                     <connections>
                                                         <outlet property="lable" destination="Zeo-RY-4XG" id="bjD-52-W53"/>
+                                                        <outlet property="parent" destination="UNN-Ep-ZNG" id="SJl-6K-pzh"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -170,7 +171,7 @@
                                         <constraint firstItem="O8o-DB-JbS" firstAttribute="top" secondItem="fPb-6Z-GF7" secondAttribute="top" constant="4" id="2Sr-Ds-Osc"/>
                                         <constraint firstAttribute="bottom" secondItem="O8o-DB-JbS" secondAttribute="bottom" constant="4" id="3sZ-zZ-rRQ"/>
                                         <constraint firstItem="O8o-DB-JbS" firstAttribute="leading" secondItem="fPb-6Z-GF7" secondAttribute="leading" constant="16" id="D4t-r7-XtR"/>
-                                        <constraint firstItem="O8o-DB-JbS" firstAttribute="width" secondItem="fPb-6Z-GF7" secondAttribute="width" multiplier="0.6" priority="999" id="Ntg-sj-dWx"/>
+                                        <constraint firstItem="O8o-DB-JbS" firstAttribute="width" secondItem="fPb-6Z-GF7" secondAttribute="width" multiplier="0.7" priority="999" id="Ntg-sj-dWx"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

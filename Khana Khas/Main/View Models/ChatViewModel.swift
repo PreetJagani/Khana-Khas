@@ -36,4 +36,12 @@ class ChatViewModel: NSObject {
         }
     }
 
+    func selectChatOption(option: ChatOption, completion: ((Bool) -> Void)? = nil) {
+        var text = option.text.dropFirst(2)
+        if let firstChar = text.first {
+            text.replaceSubrange(text.startIndex...text.startIndex, with: String(firstChar).lowercased())
+        }
+        self.pendingItems.append(ChatQuetion(id: 3, text: "Suggest me \(text) recipes."))
+        self.appendNextItemIfNeeded(completion: completion)
+    }
 }

@@ -55,7 +55,10 @@ extension MainTableViewController {
         } else {
             let options = item as! ChatOptions
             cell = tableView.dequeueReusableCell(withIdentifier: "options")!
-            (cell as! ChatOptionsTableViewCell).refresh(options: options)
+            if let cell = cell as? ChatOptionsTableViewCell {
+                cell.optionsDelegate = self
+                cell.refresh(options: options)
+            }
         }
         return cell
     }
@@ -86,6 +89,15 @@ extension MainTableViewController {
             return CGFloat(options.rows * (35 + 8) + 8)
         }
         return UITableView.automaticDimension
+    }
+}
+
+extension MainTableViewController : ChatOptionDelegate {
+    
+    func didSelectOption(option: ChatOption) {
+        model?.selectChatOption(option: option, completion: { complete in
+            self.refresh()
+        })
     }
 }
 

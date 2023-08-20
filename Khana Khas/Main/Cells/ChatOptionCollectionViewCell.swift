@@ -10,6 +10,7 @@ import UIKit
 class ChatOptionCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var lable: UILabel!
+    @IBOutlet weak var parent: UIView!
     
     
 }

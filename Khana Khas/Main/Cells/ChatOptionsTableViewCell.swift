@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ChatOptionDelegate : AnyObject {
+    func didSelectOption(option: ChatOption)
+}
+
 class ChatOptionsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -14,6 +18,8 @@ class ChatOptionsTableViewCell: UITableViewCell {
     var rowCountCache : [Int : Int] = [:]
     var numRows : Int = 0
     var layout : ChatOptionsCollectionViewLayout?
+    var selectedIndex = -1
+    weak var optionsDelegate : ChatOptionDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -62,11 +68,30 @@ extension ChatOptionsTableViewCell : UICollectionViewDataSource, UICollectionVie
         
         let item = self.items[indexPath.row]
         
+        let selected = self.selectedIndex == indexPath.row
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "option", for: indexPath) as! ChatOptionCollectionViewCell
         
         cell.lable.text = item.text
+        if selected {
+            cell.parent.layer.backgroundColor = UIColor.systemGray3.cgColor
+        } else {
+            cell.parent.layer.backgroundColor = UIColor.secondarySystemBackground.cgColor
+        }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if selectedIndex != -1 {
+            return
+        }
+        let item = self.items[indexPath.row]
+        optionsDelegate?.didSelectOption(option: item)
+        
+        selectedIndex = indexPath.row
+        
+        collectionView.reloadItems(at: [indexPath])
     }
     
     func numberOfItemsIn(row: Int) -> Int {
