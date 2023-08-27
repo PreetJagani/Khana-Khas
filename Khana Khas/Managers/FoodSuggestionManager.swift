@@ -15,7 +15,7 @@ enum IngredientType: Int {
     case Fruit = 3
 }
 
-class Ingredient: Hashable {
+class Ingredient: Hashable, Differentiable {
     
     let name : String
     let type : IngredientType
@@ -34,11 +34,34 @@ class Ingredient: Hashable {
     }
 }
 
-class IngredientSection {
+class IngredientSection: DifferentiableSection {
     
-    let header : String
-    var items : [Ingredient]
+    typealias DifferenceIdentifier = String
     
+    typealias Collection = [Ingredient]
+
+    var elements: [Ingredient] {
+        return items
+    }
+    
+    var differenceIdentifier: String {
+        get {
+            return self.header
+        }
+    }
+    
+    func isContentEqual(to source: IngredientSection) -> Bool {
+        return self.items.isContentEqual(to: source.items)
+    }
+
+    required init<C: Swift.Collection>(source: IngredientSection, elements: C) where C.Element == Ingredient {
+        self.header = source.header
+        self.items = Array(elements)
+    }
+
+    let header: String
+    var items: [Ingredient]
+
     init(header: String, items: [Ingredient]) {
         self.header = header
         self.items = items
