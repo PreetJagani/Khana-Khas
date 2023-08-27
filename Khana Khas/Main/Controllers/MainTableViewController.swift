@@ -12,6 +12,7 @@ class MainTableViewController: UITableViewController {
     
     var model : ChatViewModel?
     var items : [ChatItem] = []
+    var choosingIngredients = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,26 +91,36 @@ extension MainTableViewController {
     }
 }
 
-extension MainTableViewController : ChatViewModelDelegate, ChatOptionDelegate {
+extension MainTableViewController : ChatViewModelDelegate, ChatOptionDelegate, IngredientsSelectionDelegate {
     
     func dataUpdated() {
         self.refresh()
     }
     
     func didSelectOption(option: ChatOption) {
-        model?.generateQuetion(option: option)
+        model?.generateQuestion(option: option)
     }
     
-    func shoudSelectOption(option: ChatOption) -> Bool {
+    func shouldSelectOption(option: ChatOption) -> Bool {
         if (option.text == "Ingredients") {
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "ingredients")
-            self.navigationController?.present(vc, animated: true)
-            
+            if let item = self.items.last as? ChatOptions, item.text == "ingredients" {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let navVc = storyboard.instantiateViewController(withIdentifier: "ingredients") as! UINavigationController
+                
+                if let ingredientsVc = navVc.viewControllers[0] as? IngredientsTableViewController {
+                    ingredientsVc.ingredientsDelegate = self
+                }
+                self.navigationController?.present(navVc, animated: true)
+            }
             return false
         }
         return true
+    }
+    
+    func didSelectIngredient(ingredients: [Ingredient]) {
+        if (ingredients.count > 0) {
+            model?.didSelectIngredients(ingredients: ingredients)
+        }
     }
 }
 

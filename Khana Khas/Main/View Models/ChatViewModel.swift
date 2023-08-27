@@ -55,7 +55,7 @@ class ChatViewModel: NSObject {
         }
     }
 
-    func generateQuetion(option: ChatOption) {
+    func generateQuestion(option: ChatOption) {
         var text = option.text.dropFirst(2)
         if let firstChar = text.first {
             text.replaceSubrange(text.startIndex...text.startIndex, with: String(firstChar).lowercased())
@@ -74,7 +74,17 @@ class ChatViewModel: NSObject {
         self.appendNextItemIfNeeded()
     }
     
-    func generateAnswer(option: ChatOption) {
+    func didSelectIngredients(ingredients: [Ingredient]) {
+        var text = ""
+        for ingredient in ingredients {
+            text.append("\(ingredient.name) ,")
+        }
+        text.removeLast(2)
+        self.pendingItems.append(ChatQuetion(id: self.nextId(), text: text))
+        self.generateAnswer()
+    }
+    
+    func generateAnswer() {
         self.pendingItems.append(ChatItem.loadingItem)
         self.appendNextItemIfNeeded()
         FoodSuggestionManager.shared.suggestFood(promt: "") { suggetion in

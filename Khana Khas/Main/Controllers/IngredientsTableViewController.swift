@@ -8,6 +8,10 @@
 import UIKit
 import DifferenceKit
 
+protocol IngredientsSelectionDelegate: AnyObject {
+    func didSelectIngredient(ingredients: [Ingredient])
+}
+
 class IngredientsTableViewController: UITableViewController {
     
     var items: [IngredientSection] = []
@@ -17,9 +21,9 @@ class IngredientsTableViewController: UITableViewController {
     var searchString: String = ""
     var ingredientType: IngredientType = .All
     
+    weak var ingredientsDelegate: IngredientsSelectionDelegate?
+    
     override func viewDidLoad() {
-        
-//        [[UITextField appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]] setDefaultTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:20]}];
         
         let textFieldAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
         let attributes: [NSAttributedString.Key: Any] = [
@@ -30,10 +34,10 @@ class IngredientsTableViewController: UITableViewController {
 
         super.viewDidLoad()
         
-        let cancelBtn = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(didPressDoneBtn))
+        let cancelBtn = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(didPressCancelButton))
         self.navigationItem.leftBarButtonItems = [cancelBtn]
         
-        let doneBtn = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(didPressDoneBtn))
+        let doneBtn = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(didPressDoneButton))
         self.navigationItem.rightBarButtonItems = [doneBtn]
         
         let searchControl = UISearchController()
@@ -45,7 +49,7 @@ class IngredientsTableViewController: UITableViewController {
 
         self.navigationItem.searchController = searchControl
         
-        self.tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
+        self.tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
         
         self.refresh()
     }
@@ -75,8 +79,15 @@ class IngredientsTableViewController: UITableViewController {
         }
     }
     
-    @objc func didPressDoneBtn(sender: Any) {
-        
+    @objc func didPressCancelButton(sender: Any) {
+        self.navigationController?.dismiss(animated: true)
+    }
+    
+    @objc func didPressDoneButton(sender: Any) {
+        self.ingredientsDelegate?.didSelectIngredient(ingredients: self.selectedItems.sorted(by: { lhs, rhs in
+            return lhs.name.compare(rhs.name) == .orderedAscending
+        }))
+        self.navigationController?.dismiss(animated: true)
     }
 }
 

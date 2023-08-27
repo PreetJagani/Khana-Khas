@@ -10,7 +10,7 @@ import UIKit
 protocol ChatOptionDelegate : AnyObject {
     func didSelectOption(option: ChatOption)
     
-    func shoudSelectOption(option: ChatOption) -> Bool
+    func shouldSelectOption(option: ChatOption) -> Bool
 }
 
 class ChatOptionsTableViewCell: UITableViewCell {
@@ -79,7 +79,7 @@ extension ChatOptionsTableViewCell : UICollectionViewDataSource, UICollectionVie
             return
         }
         let item = self.items[indexPath.row]
-        if (!(self.optionsDelegate?.shoudSelectOption(option: item) ?? true)) {
+        if (!(self.optionsDelegate?.shouldSelectOption(option: item) ?? true)) {
             return
         }
         optionsDelegate?.didSelectOption(option: item)
