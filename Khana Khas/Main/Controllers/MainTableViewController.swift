@@ -99,6 +99,18 @@ extension MainTableViewController : ChatViewModelDelegate, ChatOptionDelegate {
     func didSelectOption(option: ChatOption) {
         model?.generateQuetion(option: option)
     }
+    
+    func shoudSelectOption(option: ChatOption) -> Bool {
+        if (option.text == "Ingredients") {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ingredients")
+            self.navigationController?.present(vc, animated: true)
+            
+            return false
+        }
+        return true
+    }
 }
 
 

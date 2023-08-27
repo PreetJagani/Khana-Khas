@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0085BA2A9A258500B86793 /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0085B92A9A258500B86793 /* IngredientsTableViewController.swift */; };
 		AD0663662A7626B000C29E82 /* ChatAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0663652A7626B000C29E82 /* ChatAnswerTableViewCell.swift */; };
 		AD0663682A762E9A00C29E82 /* ChatQuetionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0663672A762E9A00C29E82 /* ChatQuetionTableViewCell.swift */; };
 		AD111B592A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD111B582A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift */; };
@@ -21,7 +22,7 @@
 		AD46E9A12A6B9E4E003D94AC /* Khana_KhasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E9A02A6B9E4E003D94AC /* Khana_KhasUITests.swift */; };
 		AD46E9A32A6B9E4E003D94AC /* Khana_KhasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E9A22A6B9E4E003D94AC /* Khana_KhasUITestsLaunchTests.swift */; };
 		AD46E9B12A6BA01D003D94AC /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD46E9B02A6BA01D003D94AC /* Onboard.storyboard */; };
-		AD5AC07A2A91E08600E4A4F9 /* FoodSuggetionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5AC0792A91E08600E4A4F9 /* FoodSuggetionManager.swift */; };
+		AD5AC07A2A91E08600E4A4F9 /* FoodSuggestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5AC0792A91E08600E4A4F9 /* FoodSuggestionManager.swift */; };
 		AD5AC07C2A91E42F00E4A4F9 /* ChatLoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5AC07B2A91E42F00E4A4F9 /* ChatLoadingTableViewCell.swift */; };
 		AD8760F62A8BB7C900419784 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760F52A8BB7C900419784 /* ChatViewModel.swift */; };
 		AD8760F92A8BB86C00419784 /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760F82A8BB86C00419784 /* ChatItem.swift */; };
@@ -39,6 +40,7 @@
 		ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */; };
 		ADB73DD22A74DF5B007D53E9 /* Entry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */; };
 		ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */; };
+		ADC0EC552A9B1A2200764E5E /* IngredientItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC0EC542A9B1A2200764E5E /* IngredientItemTableViewCell.swift */; };
 		ADF27DD92A92186B0035B1A4 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF27DD82A92186B0035B1A4 /* ChatTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD0085B92A9A258500B86793 /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
 		AD0663652A7626B000C29E82 /* ChatAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAnswerTableViewCell.swift; sourceTree = "<group>"; };
 		AD0663672A762E9A00C29E82 /* ChatQuetionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatQuetionTableViewCell.swift; sourceTree = "<group>"; };
 		AD111B582A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardGetStatedViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +81,7 @@
 		AD46E9A02A6B9E4E003D94AC /* Khana_KhasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khana_KhasUITests.swift; sourceTree = "<group>"; };
 		AD46E9A22A6B9E4E003D94AC /* Khana_KhasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khana_KhasUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AD46E9B02A6BA01D003D94AC /* Onboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboard.storyboard; sourceTree = "<group>"; };
-		AD5AC0792A91E08600E4A4F9 /* FoodSuggetionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSuggetionManager.swift; sourceTree = "<group>"; };
+		AD5AC0792A91E08600E4A4F9 /* FoodSuggestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSuggestionManager.swift; sourceTree = "<group>"; };
 		AD5AC07B2A91E42F00E4A4F9 /* ChatLoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLoadingTableViewCell.swift; sourceTree = "<group>"; };
 		AD8760F52A8BB7C900419784 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		AD8760F82A8BB86C00419784 /* ChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 		ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entry.storyboard; sourceTree = "<group>"; };
 		ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPrefrenceViewController.swift; sourceTree = "<group>"; };
+		ADC0EC542A9B1A2200764E5E /* IngredientItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientItemTableViewCell.swift; sourceTree = "<group>"; };
 		ADF27DD82A92186B0035B1A4 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				AD46E9832A6B9E4D003D94AC /* MainTableViewController.swift */,
+				AD0085B92A9A258500B86793 /* IngredientsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 				AD8A36992A88B989007842FE /* ChatOptionsTableViewCell.swift */,
 				AD8C11DE2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift */,
 				AD5AC07B2A91E42F00E4A4F9 /* ChatLoadingTableViewCell.swift */,
+				ADC0EC542A9B1A2200764E5E /* IngredientItemTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -272,7 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */,
-				AD5AC0792A91E08600E4A4F9 /* FoodSuggetionManager.swift */,
+				AD5AC0792A91E08600E4A4F9 /* FoodSuggestionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -420,7 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD111B592A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift in Sources */,
-				AD5AC07A2A91E08600E4A4F9 /* FoodSuggetionManager.swift in Sources */,
+				AD5AC07A2A91E08600E4A4F9 /* FoodSuggestionManager.swift in Sources */,
 				AD0663682A762E9A00C29E82 /* ChatQuetionTableViewCell.swift in Sources */,
 				AD8761002A8BB8C500419784 /* ChatOption.swift in Sources */,
 				ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */,
@@ -432,11 +438,13 @@
 				AD46E9822A6B9E4D003D94AC /* SceneDelegate.swift in Sources */,
 				AD8C11DF2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift in Sources */,
 				AD8760F92A8BB86C00419784 /* ChatItem.swift in Sources */,
+				ADC0EC552A9B1A2200764E5E /* IngredientItemTableViewCell.swift in Sources */,
 				AD111B5B2A6BACC900FE38B5 /* OnboardPageViewController.swift in Sources */,
 				ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */,
 				AD8760FE2A8BB8AF00419784 /* ChatAnswer.swift in Sources */,
 				AD0663662A7626B000C29E82 /* ChatAnswerTableViewCell.swift in Sources */,
 				ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */,
+				AD0085BA2A9A258500B86793 /* IngredientsTableViewController.swift in Sources */,
 				AD8A369E2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift in Sources */,
 				AD8760FC2A8BB8A000419784 /* ChatQuetion.swift in Sources */,
 				AD8760F62A8BB7C900419784 /* ChatViewModel.swift in Sources */,

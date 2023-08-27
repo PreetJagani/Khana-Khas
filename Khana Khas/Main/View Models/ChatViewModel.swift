@@ -62,13 +62,22 @@ class ChatViewModel: NSObject {
         }
         self.pendingItems.append(ChatQuetion(id: self.nextId(), text: "Suggest me \(text) recipes."))
         self.appendNextItemIfNeeded()
-        self.generateAnswer(option: option)
+        self.showChooseIngredients()
+//        self.generateAnswer(option: option)
+    }
+    
+    func showChooseIngredients() {
+        self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Sure, Select ingredients"))
+        self.pendingItems.append(ChatOptions(id: self.nextId(), text: "ingredients", options: [
+            ChatOption(text: "Ingredients", rowNumber: 0),
+        ], rows: 1))
+        self.appendNextItemIfNeeded()
     }
     
     func generateAnswer(option: ChatOption) {
         self.pendingItems.append(ChatItem.loadingItem)
         self.appendNextItemIfNeeded()
-        FoodSuggetionManager.shared.suggestFood(promt: "") { suggetion in
+        FoodSuggestionManager.shared.suggestFood(promt: "") { suggetion in
             self.pendingItems.remove(at: self.currIndex)
             self.items.remove(at: self.currIndex)
             self.currIndex -= 1
