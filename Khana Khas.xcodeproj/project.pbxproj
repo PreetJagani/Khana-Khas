@@ -35,6 +35,9 @@
 		AD8DA8912A72D65D0011B2B3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AD8DA8902A72D65D0011B2B3 /* Lottie */; };
 		AD8DA8942A72D6D50011B2B3 /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = AD8DA8932A72D6D50011B2B3 /* welcome.json */; };
 		AD8DA8962A72D6F70011B2B3 /* OnboardWelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8DA8952A72D6F70011B2B3 /* OnboardWelcomePageController.swift */; };
+		AD92E5A92A9CF9B1006FF5DB /* FoodRecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD92E5A82A9CF9B1006FF5DB /* FoodRecipeTableViewCell.swift */; };
+		AD92E5AB2A9CFADB006FF5DB /* ChatFoodRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD92E5AA2A9CFADB006FF5DB /* ChatFoodRecipes.swift */; };
+		AD92E5AD2A9D087B006FF5DB /* khadvi.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AD92E5AC2A9D087B006FF5DB /* khadvi.jpeg */; };
 		ADB6C02C2A7E2223004D8E04 /* DifferenceKit in Frameworks */ = {isa = PBXBuildFile; productRef = ADB6C02B2A7E2223004D8E04 /* DifferenceKit */; };
 		ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */; };
 		ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */; };
@@ -93,6 +96,9 @@
 		AD8C11DE2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD8DA8932A72D6D50011B2B3 /* welcome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcome.json; sourceTree = "<group>"; };
 		AD8DA8952A72D6F70011B2B3 /* OnboardWelcomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardWelcomePageController.swift; sourceTree = "<group>"; };
+		AD92E5A82A9CF9B1006FF5DB /* FoodRecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecipeTableViewCell.swift; sourceTree = "<group>"; };
+		AD92E5AA2A9CFADB006FF5DB /* ChatFoodRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFoodRecipes.swift; sourceTree = "<group>"; };
+		AD92E5AC2A9D087B006FF5DB /* khadvi.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = khadvi.jpeg; sourceTree = "<group>"; };
 		ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrenceManager.swift; sourceTree = "<group>"; };
 		ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entry.storyboard; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 				AD8C11DE2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift */,
 				AD5AC07B2A91E42F00E4A4F9 /* ChatLoadingTableViewCell.swift */,
 				ADC0EC542A9B1A2200764E5E /* IngredientItemTableViewCell.swift */,
+				AD92E5A82A9CF9B1006FF5DB /* FoodRecipeTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -254,6 +261,7 @@
 				AD8760FB2A8BB8A000419784 /* ChatQuestion.swift */,
 				AD8760FD2A8BB8AF00419784 /* ChatAnswer.swift */,
 				AD8760FF2A8BB8C500419784 /* ChatOption.swift */,
+				AD92E5AA2A9CFADB006FF5DB /* ChatFoodRecipes.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -270,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8DA8932A72D6D50011B2B3 /* welcome.json */,
+				AD92E5AC2A9D087B006FF5DB /* khadvi.jpeg */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -397,6 +406,7 @@
 			files = (
 				AD46E98C2A6B9E4E003D94AC /* LaunchScreen.storyboard in Resources */,
 				ADB73DD22A74DF5B007D53E9 /* Entry.storyboard in Resources */,
+				AD92E5AD2A9D087B006FF5DB /* khadvi.jpeg in Resources */,
 				AD46E9892A6B9E4E003D94AC /* Assets.xcassets in Resources */,
 				AD46E9B12A6BA01D003D94AC /* Onboard.storyboard in Resources */,
 				AD46E9872A6B9E4D003D94AC /* Main.storyboard in Resources */,
@@ -428,6 +438,7 @@
 				AD111B592A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift in Sources */,
 				AD5AC07A2A91E08600E4A4F9 /* FoodSuggestionManager.swift in Sources */,
 				AD0663682A762E9A00C29E82 /* ChatQuetionTableViewCell.swift in Sources */,
+				AD92E5AB2A9CFADB006FF5DB /* ChatFoodRecipes.swift in Sources */,
 				AD8761002A8BB8C500419784 /* ChatOption.swift in Sources */,
 				ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */,
 				ADF27DD92A92186B0035B1A4 /* ChatTableViewCell.swift in Sources */,
@@ -445,6 +456,7 @@
 				AD0663662A7626B000C29E82 /* ChatAnswerTableViewCell.swift in Sources */,
 				ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */,
 				AD0085BA2A9A258500B86793 /* IngredientsTableViewController.swift in Sources */,
+				AD92E5A92A9CF9B1006FF5DB /* FoodRecipeTableViewCell.swift in Sources */,
 				AD8A369E2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift in Sources */,
 				AD8760FC2A8BB8A000419784 /* ChatQuestion.swift in Sources */,
 				AD8760F62A8BB7C900419784 /* ChatViewModel.swift in Sources */,

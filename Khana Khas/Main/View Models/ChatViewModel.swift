@@ -97,7 +97,8 @@ class ChatViewModel: NSObject {
             self.pendingItems.remove(at: self.currIndex)
             self.items.remove(at: self.currIndex)
             self.currIndex -= 1
-            self.pendingItems.append(ChatAnswer(id: self.nextId(), text: suggestion))
+            self.pendingItems.append(ChatFoodRecipes(id: self.nextId(), text: "Recipe", recipes: [Recipe(title: "Khandvi", des: "Khandvi is a popular Gujarati snack made from a mixture of gram flour and yogurt. It is tempered with mustard seeds and garnished with shredded coconut and coriander leaves. It is a light and savory dish that can be enjoyed as a dinner option."), Recipe(title: "Undhiyu", des: "Undhiyu is a traditional Gujarati mixed vegetable dish that is made using a variety of winter vegetables like kabij, onions, beans, and eggplant. It is cooked in a flavorful blend of spices and served with puris or rice. Undhiyu is a hearty and delicious dinner option.")]))
+            // self.pendingItems.append(ChatAnswer(id: self.nextId(), text: suggestion))
             self.appendNextItemIfNeeded()
         }
     }

@@ -64,6 +64,12 @@ extension MainTableViewController {
                 cell.optionsDelegate = self
                 cell.refresh(options: options)
             }
+        } else if item.isKind(of: ChatFoodRecipes.self) {
+            let recipes = item as! ChatFoodRecipes
+            cell = tableView.dequeueReusableCell(withIdentifier: "recipe")!
+            if let cell = cell as? FoodRecipeTableViewCell {
+                cell.refresh(recipes: recipes.recipes)
+            }
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "loading")!
         }
@@ -86,6 +92,8 @@ extension MainTableViewController {
         if (item.isKind(of: ChatOptions.self)) {
             let options = item as! ChatOptions
             return CGFloat(options.rows * (35 + 8) + 8)
+        } else if (item.isKind(of: ChatFoodRecipes.self)) {
+            return 250
         }
         return UITableView.automaticDimension
     }
