@@ -53,8 +53,8 @@ extension MainTableViewController {
             let answer = item as! ChatAnswer
             cell = tableView.dequeueReusableCell(withIdentifier: "answer")!
             (cell as! ChatAnswerTableViewCell).refresh(text: answer.text)
-        } else if item.isKind(of: ChatQuetion.self) {
-            let quetion = item as! ChatQuetion
+        } else if item.isKind(of: ChatQuestion.self) {
+            let quetion = item as! ChatQuestion
             cell = tableView.dequeueReusableCell(withIdentifier: "quetion")!
             (cell as! ChatQuetionTableViewCell).refresh(text: quetion.text)
         } else if item.isKind(of: ChatOptions.self) {

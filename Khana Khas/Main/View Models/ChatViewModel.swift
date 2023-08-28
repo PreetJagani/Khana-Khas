@@ -20,6 +20,9 @@ class ChatViewModel: NSObject {
     weak var modelDelegate : ChatViewModelDelegate? = nil
     var isAnimating : Bool = false
     
+    var activeOption: ChatOption?
+    var activeIngredients: [Ingredient]?
+    
     func start() {
         self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Good Morning! How Can I assist you today?"))
         self.pendingItems.append(ChatOptions(id: self.nextId(), text: "options", options: [
@@ -60,10 +63,10 @@ class ChatViewModel: NSObject {
         if let firstChar = text.first {
             text.replaceSubrange(text.startIndex...text.startIndex, with: String(firstChar).lowercased())
         }
-        self.pendingItems.append(ChatQuetion(id: self.nextId(), text: "Suggest me \(text) recipes."))
+        self.pendingItems.append(ChatQuestion(id: self.nextId(), text: "Suggest me \(text) recipes."))
         self.appendNextItemIfNeeded()
+        self.activeOption = option
         self.showChooseIngredients()
-//        self.generateAnswer(option: option)
     }
     
     func showChooseIngredients() {
@@ -80,18 +83,21 @@ class ChatViewModel: NSObject {
             text.append("\(ingredient.name) ,")
         }
         text.removeLast(2)
-        self.pendingItems.append(ChatQuetion(id: self.nextId(), text: text))
+        self.activeIngredients = ingredients
+        self.pendingItems.append(ChatQuestion(id: self.nextId(), text: text))
         self.generateAnswer()
     }
     
     func generateAnswer() {
         self.pendingItems.append(ChatItem.loadingItem)
         self.appendNextItemIfNeeded()
-        FoodSuggestionManager.shared.suggestFood(promt: "") { suggetion in
+        var foodTime = self.activeOption?.text ?? "  Dinner"
+        foodTime.removeFirst(2)
+        FoodSuggestionManager.shared.suggestFood(foodTime: foodTime, foodType: "Gujarati", ingredients: self.activeIngredients?.description ?? "[]") { suggestion in
             self.pendingItems.remove(at: self.currIndex)
             self.items.remove(at: self.currIndex)
             self.currIndex -= 1
-            self.pendingItems.append(ChatAnswer(id: self.nextId(), text: suggetion))
+            self.pendingItems.append(ChatAnswer(id: self.nextId(), text: suggestion))
             self.appendNextItemIfNeeded()
         }
     }

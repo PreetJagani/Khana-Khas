@@ -68,10 +68,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mV9-EB-Sma">
-                                            <rect key="frame" x="102" y="4" width="275" height="64.666666666666671"/>
+                                            <rect key="frame" x="131" y="4" width="246" height="64.666666666666671"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Could you please suggest a dinner recipe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klA-w1-rFl">
-                                                    <rect key="frame" x="16" y="11.999999999999996" width="243" height="40.666666666666657"/>
+                                                    <rect key="frame" x="16" y="11.999999999999996" width="214" height="40.666666666666657"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -82,7 +82,6 @@
                                             <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="klA-w1-rFl" secondAttribute="bottom" constant="12" id="FRn-Te-ELT"/>
-                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="MZH-2s-i1k"/>
                                                 <constraint firstItem="klA-w1-rFl" firstAttribute="top" secondItem="mV9-EB-Sma" secondAttribute="top" constant="12" id="OgI-RI-Uau"/>
                                                 <constraint firstItem="klA-w1-rFl" firstAttribute="leading" secondItem="mV9-EB-Sma" secondAttribute="leading" constant="16" id="isZ-7X-3AQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="klA-w1-rFl" secondAttribute="trailing" constant="16" id="zj5-wS-8Cv"/>
@@ -91,7 +90,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="mV9-EB-Sma" firstAttribute="top" secondItem="qPj-Ik-rgk" secondAttribute="top" constant="4" id="FXl-Qo-h5n"/>
-                                        <constraint firstItem="mV9-EB-Sma" firstAttribute="width" secondItem="qPj-Ik-rgk" secondAttribute="width" multiplier="0.7" priority="999" id="UmS-ff-f7G"/>
+                                        <constraint firstItem="mV9-EB-Sma" firstAttribute="width" relation="lessThanOrEqual" secondItem="qPj-Ik-rgk" secondAttribute="width" multiplier="0.7" id="UmS-ff-f7G"/>
                                         <constraint firstAttribute="trailing" secondItem="mV9-EB-Sma" secondAttribute="trailing" constant="16" id="jJk-ZX-nlg"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mV9-EB-Sma" secondAttribute="bottom" constant="4" id="oCC-XB-atm"/>
                                     </constraints>
@@ -274,14 +273,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="item" id="Zbi-Lz-8st" customClass="IngredientItemTableViewCell" customModule="Khana_Khas" customModuleProvider="target">
-                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="43.666667938232422"/>
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zbi-Lz-8st" id="Oej-Pa-Z6J">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cl3-jH-W98">
-                                            <rect key="frame" x="20" y="11.000000000000002" width="313" height="21.666666666666671"/>
+                                            <rect key="frame" x="20" y="11" width="313" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>

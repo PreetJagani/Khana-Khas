@@ -8,6 +8,8 @@
 import UIKit
 import DifferenceKit
 
+let url = "http://localhost:8000/suggest"
+
 enum IngredientType: Int {
     case All = 0
     case Ingredients = 1
@@ -15,7 +17,7 @@ enum IngredientType: Int {
     case Fruit = 3
 }
 
-class Ingredient: Hashable, Differentiable {
+class Ingredient: Hashable, Differentiable, CustomStringConvertible {
     
     let name : String
     let type : IngredientType
@@ -31,6 +33,12 @@ class Ingredient: Hashable, Differentiable {
     
     static func == (lhs: Ingredient, rhs: Ingredient) -> Bool {
         return lhs.name == rhs.name
+    }
+    
+    var description: String {
+        get {
+            return self.name
+        }
     }
 }
 
@@ -86,16 +94,45 @@ class FoodSuggestionManager: NSObject {
         
     }
     
-    func suggestFood(promt: String, completion: @escaping (String) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            completion("""
-                        Dal Dhokli:
-                        Dal Dhokli is a comforting one-pot dish that combines soft wheat flour dumplings (dhokli) with a spiced lentil soup (dal). The dumplings are simmered in the dal until they're cooked through, creating a hearty and flavorful meal.
-                        Ringan Ravaiya:
-                        Ringan Ravaiya, also known as Baingan Bharta in some regions, is a roasted eggplant dish. The eggplant is roasted, mashed, and then cooked with spices, tomatoes, and sometimes peas. It's usually enjoyed with roti or rice.
-                        Surti Undhiyu:
-                        Surti Undhiyu is a popular winter dish that consists of mixed vegetables, fenugreek dumplings, and spices. It's traditionally cooked in an earthen pot and has a unique blend of flavors due to the use of special spices and cooking techniques.
-                        """)
+    func suggestFood(foodTime: String, foodType: String, ingredients: String, completion: @escaping (String) -> Void) {
+        if let url = URL(string: url) {
+            let session = URLSession.shared
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            
+            let jsonBody: [String: Any] = [
+                "food_time": foodTime,
+                "food_type": foodType,
+                "ingredients": ingredients
+            ]
+            
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: jsonBody, options: [])
+                request.httpBody = jsonData
+                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            } catch {
+                print("Error creating JSON data: \(error)")
+                return
+            }
+            
+            let task = session.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print("Error: \(error)")
+                    completion("")
+                    return
+                }
+                
+                if let data = data {
+                    if let jsonString = String(data: data, encoding: .utf8) {
+                        print("Response: \(jsonString)")
+                        completion(jsonString)
+                    }
+                }
+            }
+            task.resume()
+        } else {
+            completion("")
         }
     }
     

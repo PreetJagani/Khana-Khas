@@ -7,6 +7,6 @@
 
 import UIKit
 
-class ChatQuetion: ChatItem {
+class ChatQuestion: ChatItem {
 
 }

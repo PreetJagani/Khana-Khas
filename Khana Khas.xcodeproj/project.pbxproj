@@ -26,7 +26,7 @@
 		AD5AC07C2A91E42F00E4A4F9 /* ChatLoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5AC07B2A91E42F00E4A4F9 /* ChatLoadingTableViewCell.swift */; };
 		AD8760F62A8BB7C900419784 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760F52A8BB7C900419784 /* ChatViewModel.swift */; };
 		AD8760F92A8BB86C00419784 /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760F82A8BB86C00419784 /* ChatItem.swift */; };
-		AD8760FC2A8BB8A000419784 /* ChatQuetion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760FB2A8BB8A000419784 /* ChatQuetion.swift */; };
+		AD8760FC2A8BB8A000419784 /* ChatQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760FB2A8BB8A000419784 /* ChatQuestion.swift */; };
 		AD8760FE2A8BB8AF00419784 /* ChatAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760FD2A8BB8AF00419784 /* ChatAnswer.swift */; };
 		AD8761002A8BB8C500419784 /* ChatOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760FF2A8BB8C500419784 /* ChatOption.swift */; };
 		AD8A369A2A88B989007842FE /* ChatOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8A36992A88B989007842FE /* ChatOptionsTableViewCell.swift */; };
@@ -85,7 +85,7 @@
 		AD5AC07B2A91E42F00E4A4F9 /* ChatLoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLoadingTableViewCell.swift; sourceTree = "<group>"; };
 		AD8760F52A8BB7C900419784 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		AD8760F82A8BB86C00419784 /* ChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
-		AD8760FB2A8BB8A000419784 /* ChatQuetion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatQuetion.swift; sourceTree = "<group>"; };
+		AD8760FB2A8BB8A000419784 /* ChatQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatQuestion.swift; sourceTree = "<group>"; };
 		AD8760FD2A8BB8AF00419784 /* ChatAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAnswer.swift; sourceTree = "<group>"; };
 		AD8760FF2A8BB8C500419784 /* ChatOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOption.swift; sourceTree = "<group>"; };
 		AD8A36992A88B989007842FE /* ChatOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOptionsTableViewCell.swift; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8760F82A8BB86C00419784 /* ChatItem.swift */,
-				AD8760FB2A8BB8A000419784 /* ChatQuetion.swift */,
+				AD8760FB2A8BB8A000419784 /* ChatQuestion.swift */,
 				AD8760FD2A8BB8AF00419784 /* ChatAnswer.swift */,
 				AD8760FF2A8BB8C500419784 /* ChatOption.swift */,
 			);
@@ -446,7 +446,7 @@
 				ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */,
 				AD0085BA2A9A258500B86793 /* IngredientsTableViewController.swift in Sources */,
 				AD8A369E2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift in Sources */,
-				AD8760FC2A8BB8A000419784 /* ChatQuetion.swift in Sources */,
+				AD8760FC2A8BB8A000419784 /* ChatQuestion.swift in Sources */,
 				AD8760F62A8BB7C900419784 /* ChatViewModel.swift in Sources */,
 				AD8DA8962A72D6F70011B2B3 /* OnboardWelcomePageController.swift in Sources */,
 			);
