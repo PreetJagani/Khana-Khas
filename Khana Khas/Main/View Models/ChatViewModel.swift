@@ -80,7 +80,7 @@ class ChatViewModel: NSObject {
     func didSelectIngredients(ingredients: [Ingredient]) {
         var text = ""
         for ingredient in ingredients {
-            text.append("\(ingredient.name) ,")
+            text.append("\(ingredient.name), ")
         }
         text.removeLast(2)
         self.activeIngredients = ingredients
@@ -93,12 +93,28 @@ class ChatViewModel: NSObject {
         self.appendNextItemIfNeeded()
         var foodTime = self.activeOption?.text ?? "  Dinner"
         foodTime.removeFirst(2)
-        FoodSuggestionManager.shared.suggestFood(foodTime: foodTime, foodType: "Gujarati", ingredients: self.activeIngredients?.description ?? "[]") { suggestion in
+        FoodSuggestionManager.shared.suggestFood(foodTime: foodTime, foodType: "Gujarati", ingredients: self.activeIngredients?.description ?? "[]") { suggestions, error in
             self.pendingItems.remove(at: self.currIndex)
             self.items.remove(at: self.currIndex)
             self.currIndex -= 1
-            self.pendingItems.append(ChatFoodRecipes(id: self.nextId(), text: "Recipe", recipes: [Recipe(title: "Khandvi", des: "Khandvi is a popular Gujarati snack made from a mixture of gram flour and yogurt. It is tempered with mustard seeds and garnished with shredded coconut and coriander leaves. It is a light and savory dish that can be enjoyed as a dinner option."), Recipe(title: "Undhiyu", des: "Undhiyu is a traditional Gujarati mixed vegetable dish that is made using a variety of winter vegetables like kabij, onions, beans, and eggplant. It is cooked in a flavorful blend of spices and served with puris or rice. Undhiyu is a hearty and delicious dinner option.")]))
-            // self.pendingItems.append(ChatAnswer(id: self.nextId(), text: suggestion))
+            
+            var foodRecipe: Array<Recipe> = []
+            do {
+                if let recipesString = suggestions["res"] as? String,
+                   let data = recipesString.data(using: .utf8),
+                   let recipes = try JSONSerialization.jsonObject(with: data) as? [[String:Any]] {
+                    for recipe in recipes {
+                        if let name = recipe["food_name"] as? String, let info = recipe["info"] as? String {
+                            foodRecipe.append(Recipe(title: name, des: info))
+                        }
+                    }
+                }
+            } catch let e {
+                print(e)
+            }
+            
+            
+            self.pendingItems.append(ChatFoodRecipes(id: self.nextId(), text: "Recipe", recipes: foodRecipe))
             self.appendNextItemIfNeeded()
         }
     }

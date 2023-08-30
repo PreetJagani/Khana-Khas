@@ -94,7 +94,7 @@ class FoodSuggestionManager: NSObject {
         
     }
     
-    func suggestFood(foodTime: String, foodType: String, ingredients: String, completion: @escaping (String) -> Void) {
+    func suggestFood(foodTime: String, foodType: String, ingredients: String, completion: @escaping (Dictionary<String, Any>, Error?) -> Void) {
         if let url = URL(string: url) {
             let session = URLSession.shared
             
@@ -119,20 +119,29 @@ class FoodSuggestionManager: NSObject {
             let task = session.dataTask(with: request) { data, response, error in
                 if let error = error {
                     print("Error: \(error)")
-                    completion("")
+                    completion([:], error)
                     return
                 }
                 
                 if let data = data {
                     if let jsonString = String(data: data, encoding: .utf8) {
                         print("Response: \(jsonString)")
-                        completion(jsonString)
+                        do {
+                            if let json = try JSONSerialization.jsonObject(with: data) as? Dictionary<String, Any> {
+                                completion(json, nil)
+                            } else {
+                                completion([:], error)                                
+                            }
+                        } catch let error {
+                            completion([:], error)
+                            print(error)
+                        }
                     }
                 }
             }
             task.resume()
         } else {
-            completion("")
+            completion([:], nil)
         }
     }
     
