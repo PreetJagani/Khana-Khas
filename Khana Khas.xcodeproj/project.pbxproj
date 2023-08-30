@@ -29,6 +29,8 @@
 		AD8760FC2A8BB8A000419784 /* ChatQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760FB2A8BB8A000419784 /* ChatQuestion.swift */; };
 		AD8760FE2A8BB8AF00419784 /* ChatAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760FD2A8BB8AF00419784 /* ChatAnswer.swift */; };
 		AD8761002A8BB8C500419784 /* ChatOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760FF2A8BB8C500419784 /* ChatOption.swift */; };
+		AD898E6D2A9F6B2000CC70D2 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD898E6C2A9F6B2000CC70D2 /* RecipeDetailViewController.swift */; };
+		AD898E6F2A9F702400CC70D2 /* PanesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD898E6E2A9F702400CC70D2 /* PanesManager.swift */; };
 		AD8A369A2A88B989007842FE /* ChatOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8A36992A88B989007842FE /* ChatOptionsTableViewCell.swift */; };
 		AD8A369E2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8A369D2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift */; };
 		AD8C11DF2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8C11DE2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift */; };
@@ -91,6 +93,8 @@
 		AD8760FB2A8BB8A000419784 /* ChatQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatQuestion.swift; sourceTree = "<group>"; };
 		AD8760FD2A8BB8AF00419784 /* ChatAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAnswer.swift; sourceTree = "<group>"; };
 		AD8760FF2A8BB8C500419784 /* ChatOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOption.swift; sourceTree = "<group>"; };
+		AD898E6C2A9F6B2000CC70D2 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		AD898E6E2A9F702400CC70D2 /* PanesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanesManager.swift; sourceTree = "<group>"; };
 		AD8A36992A88B989007842FE /* ChatOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOptionsTableViewCell.swift; sourceTree = "<group>"; };
 		AD8A369D2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOptionsCollectionViewLayout.swift; sourceTree = "<group>"; };
 		AD8C11DE2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOptionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			children = (
 				AD46E9832A6B9E4D003D94AC /* MainTableViewController.swift */,
 				AD0085B92A9A258500B86793 /* IngredientsTableViewController.swift */,
+				AD898E6C2A9F6B2000CC70D2 /* RecipeDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			children = (
 				ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */,
 				AD5AC0792A91E08600E4A4F9 /* FoodSuggestionManager.swift */,
+				AD898E6E2A9F702400CC70D2 /* PanesManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -454,9 +460,11 @@
 				ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */,
 				AD8760FE2A8BB8AF00419784 /* ChatAnswer.swift in Sources */,
 				AD0663662A7626B000C29E82 /* ChatAnswerTableViewCell.swift in Sources */,
+				AD898E6D2A9F6B2000CC70D2 /* RecipeDetailViewController.swift in Sources */,
 				ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */,
 				AD0085BA2A9A258500B86793 /* IngredientsTableViewController.swift in Sources */,
 				AD92E5A92A9CF9B1006FF5DB /* FoodRecipeTableViewCell.swift in Sources */,
+				AD898E6F2A9F702400CC70D2 /* PanesManager.swift in Sources */,
 				AD8A369E2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift in Sources */,
 				AD8760FC2A8BB8A000419784 /* ChatQuestion.swift in Sources */,
 				AD8760F62A8BB7C900419784 /* ChatViewModel.swift in Sources */,

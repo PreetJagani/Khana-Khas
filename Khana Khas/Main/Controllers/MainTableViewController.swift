@@ -16,6 +16,7 @@ class MainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = false
         model = ChatViewModel()
         model?.modelDelegate = self
         self.model?.start()

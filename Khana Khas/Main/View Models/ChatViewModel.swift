@@ -34,6 +34,7 @@ class ChatViewModel: NSObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.appendNextItemIfNeeded()
         }
+//        self.generateAnswer()
     }
     
     func nextId() -> Int {

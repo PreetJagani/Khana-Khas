@@ -39,7 +39,10 @@ extension FoodRecipeTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let recipe = self.items[indexPath.row]
+        PanesManager.shared.showRecipeDetailVc(recipe: recipe)
+    }
 }
 
 class FoodRecipeCollectionViewCell: UICollectionViewCell {
