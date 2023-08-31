@@ -6,31 +6,39 @@
 //
 
 import UIKit
+import UIView_Shimmer
 
 class RecipeDetailViewController: UIViewController {
 
     @IBOutlet weak var foodTitle: UILabel!
     @IBOutlet weak var foodDescription: UILabel!
     
-    @IBOutlet weak var detailView: UIView!
-    @IBOutlet weak var loadingView: UIView!
-    
+    @IBOutlet weak var detailView: ShimmerView!
     
     var recipe: Recipe?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.update()
+        
+        self.detailView.setTemplateWithSubviews(true)
     }
     
     func update() {
         self.foodTitle.text = recipe?.title
         self.foodDescription.text = recipe?.des
-        self.loadingView.isHidden = false
-        self.detailView.isHidden = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.loadingView.isHidden = true
-            self.detailView.isHidden = false
+            self.detailView.setTemplateWithSubviews(false)
         }
     }
+}
+
+class ShimmerView: UIView, ShimmeringViewProtocol {
+    
+    var shimmeringAnimatedItems: [UIView] {
+        get {
+            return self.subviews
+        }
+    }
+    
 }

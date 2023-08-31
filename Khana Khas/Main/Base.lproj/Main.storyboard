@@ -383,14 +383,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="item" id="Zbi-Lz-8st" customClass="IngredientItemTableViewCell" customModule="Khana_Khas" customModuleProvider="target">
-                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="43"/>
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="42.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zbi-Lz-8st" id="Oej-Pa-Z6J">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="42.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cl3-jH-W98">
-                                            <rect key="frame" x="20" y="11" width="313" height="21"/>
+                                            <rect key="frame" x="20" y="11.000000000000002" width="313" height="20.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -449,7 +449,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="907"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlO-xV-g3a">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="581"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="khadvi.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="4t9-yX-wOk">
                                                 <rect key="frame" x="16" y="16" width="361" height="200"/>
@@ -474,104 +474,66 @@
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xx0-1h-jbl">
-                                                <rect key="frame" x="16" y="330.33333333333337" width="361" height="1053.6666666666665"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jr1-5b-B5O" customClass="ShimmerView" customModule="Khana_Khas" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="314.33333333333326" width="361" height="266.66666666666674"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBt-aD-XAC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="250"/>
-                                                        <subviews>
-                                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="PF5-ap-ZkU">
-                                                                <rect key="frame" x="162" y="106.66666666666669" width="37" height="37"/>
-                                                            </activityIndicatorView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstItem="PF5-ap-ZkU" firstAttribute="centerY" secondItem="pBt-aD-XAC" secondAttribute="centerY" id="CCT-Hy-OjB"/>
-                                                            <constraint firstAttribute="height" constant="250" id="EUI-bx-zcD"/>
-                                                            <constraint firstItem="PF5-ap-ZkU" firstAttribute="centerX" secondItem="pBt-aD-XAC" secondAttribute="centerX" id="ubg-dG-Ka0"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jr1-5b-B5O">
-                                                        <rect key="frame" x="0.0" y="250.00000000000006" width="361" height="803.66666666666674"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg9-XG-K3m">
-                                                                <rect key="frame" x="0.0" y="16" width="361" height="28.666666666666671"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6C-z6-WNj">
-                                                                <rect key="frame" x="0.0" y="60.666666666666629" width="361" height="258"/>
-                                                                <string key="text">- 1 cup chickpea flour (besan)
-- 1/2 cup yogurt
-- 1 teaspoon ginger paste
-- 1 teaspoon green chili paste
-- 1/2 teaspoon turmeric powder 
-- 1 teaspoon lemon juice
-- 1 teaspoon eno (fruit salt)
-- Salt to taste
-- Water as needed
-- 1 tablespoon oil
-- Mustard seeds, curry leaves, and chopped cilantro for tempering</string>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gt-77-mEM">
-                                                                <rect key="frame" x="0.0" y="334.66666666666663" width="361" height="28.666666666666686"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgV-dO-vzt">
-                                                                <rect key="frame" x="0.0" y="379.33333333333326" width="361" height="408.33333333333326"/>
-                                                                <mutableString key="text">- Mix chickpea flour, yogurt, ginger paste, green chili paste, turmeric powder, lemon juice, and salt in a bowl.
-- Add water to make a smooth batter. Let it rest for 15-20 minutes.
-- Heat water in a steamer. Grease a Dhokla tray or a shallow pan.
-- Just before steaming, add eno to the batter and mix well. It will become frothy.
-- Pour the batter into the greased tray and steam for about 15-20 minutes, or until a toothpick inserted comes out clean.
-- Once done, let it cool slightly, then cut into squares or diamond shapes.
-- For tempering, heat oil in a small pan, add mustard seeds and curry leaves. Once they crackle, pour the tempering over the Dhokla.
-- Garnish with chopped cilantro and serve with green chutney.</mutableString>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="5gt-77-mEM" secondAttribute="trailing" id="7du-0I-CJ5"/>
-                                                            <constraint firstItem="HgV-dO-vzt" firstAttribute="leading" secondItem="jr1-5b-B5O" secondAttribute="leading" id="AJB-Al-rEx"/>
-                                                            <constraint firstItem="HgV-dO-vzt" firstAttribute="top" secondItem="5gt-77-mEM" secondAttribute="bottom" constant="16" id="Ccw-h2-bqb"/>
-                                                            <constraint firstAttribute="trailing" secondItem="zg9-XG-K3m" secondAttribute="trailing" id="Khs-gg-HHj"/>
-                                                            <constraint firstAttribute="trailing" secondItem="HgV-dO-vzt" secondAttribute="trailing" id="NV8-d2-aI8"/>
-                                                            <constraint firstItem="F6C-z6-WNj" firstAttribute="leading" secondItem="jr1-5b-B5O" secondAttribute="leading" id="bpm-So-QxP"/>
-                                                            <constraint firstItem="5gt-77-mEM" firstAttribute="top" secondItem="F6C-z6-WNj" secondAttribute="bottom" constant="16" id="doh-wW-GEG"/>
-                                                            <constraint firstItem="5gt-77-mEM" firstAttribute="leading" secondItem="jr1-5b-B5O" secondAttribute="leading" id="fTB-qM-Vvv"/>
-                                                            <constraint firstAttribute="bottom" secondItem="HgV-dO-vzt" secondAttribute="bottom" constant="16" id="h3t-OU-gxP"/>
-                                                            <constraint firstItem="zg9-XG-K3m" firstAttribute="leading" secondItem="jr1-5b-B5O" secondAttribute="leading" id="nem-eQ-8Py"/>
-                                                            <constraint firstItem="F6C-z6-WNj" firstAttribute="top" secondItem="zg9-XG-K3m" secondAttribute="bottom" constant="16" id="qtQ-q0-5dt"/>
-                                                            <constraint firstItem="zg9-XG-K3m" firstAttribute="top" secondItem="jr1-5b-B5O" secondAttribute="top" constant="16" id="xmH-Ng-pc2"/>
-                                                            <constraint firstAttribute="trailing" secondItem="F6C-z6-WNj" secondAttribute="trailing" id="zxp-hQ-MUq"/>
-                                                        </constraints>
-                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg9-XG-K3m">
+                                                        <rect key="frame" x="0.0" y="16" width="361" height="28.666666666666671"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mix chickpea flour, yogurt, ginger paste, green chili paste, turmeric powder, lemon juice, and salt in a bowl" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6C-z6-WNj">
+                                                        <rect key="frame" x="0.0" y="60.666666666666693" width="361" height="64.666666666666686"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gt-77-mEM">
+                                                        <rect key="frame" x="0.0" y="141.33333333333331" width="361" height="28.666666666666657"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Mix chickpea flour, yogurt, ginger paste, green chili paste, turmeric powder, lemon juice, and salt in a bowl" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgV-dO-vzt">
+                                                        <rect key="frame" x="0.0" y="186.00000000000006" width="361" height="64.666666666666686"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
-                                            </stackView>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="5gt-77-mEM" secondAttribute="trailing" id="7du-0I-CJ5"/>
+                                                    <constraint firstItem="HgV-dO-vzt" firstAttribute="leading" secondItem="jr1-5b-B5O" secondAttribute="leading" id="AJB-Al-rEx"/>
+                                                    <constraint firstItem="HgV-dO-vzt" firstAttribute="top" secondItem="5gt-77-mEM" secondAttribute="bottom" constant="16" id="Ccw-h2-bqb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zg9-XG-K3m" secondAttribute="trailing" id="Khs-gg-HHj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="HgV-dO-vzt" secondAttribute="trailing" id="NV8-d2-aI8"/>
+                                                    <constraint firstItem="F6C-z6-WNj" firstAttribute="leading" secondItem="jr1-5b-B5O" secondAttribute="leading" id="bpm-So-QxP"/>
+                                                    <constraint firstItem="5gt-77-mEM" firstAttribute="top" secondItem="F6C-z6-WNj" secondAttribute="bottom" constant="16" id="doh-wW-GEG"/>
+                                                    <constraint firstItem="5gt-77-mEM" firstAttribute="leading" secondItem="jr1-5b-B5O" secondAttribute="leading" id="fTB-qM-Vvv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="HgV-dO-vzt" secondAttribute="bottom" constant="16" id="h3t-OU-gxP"/>
+                                                    <constraint firstItem="zg9-XG-K3m" firstAttribute="leading" secondItem="jr1-5b-B5O" secondAttribute="leading" id="nem-eQ-8Py"/>
+                                                    <constraint firstItem="F6C-z6-WNj" firstAttribute="top" secondItem="zg9-XG-K3m" secondAttribute="bottom" constant="16" id="qtQ-q0-5dt"/>
+                                                    <constraint firstItem="zg9-XG-K3m" firstAttribute="top" secondItem="jr1-5b-B5O" secondAttribute="top" constant="16" id="xmH-Ng-pc2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="F6C-z6-WNj" secondAttribute="trailing" id="zxp-hQ-MUq"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="jr1-5b-B5O" firstAttribute="top" secondItem="Xb1-N9-u6q" secondAttribute="bottom" id="Ajj-u2-jF5"/>
                                             <constraint firstItem="Xb1-N9-u6q" firstAttribute="leading" secondItem="f2q-Si-QzC" secondAttribute="leading" id="DTY-Vt-WG7"/>
                                             <constraint firstAttribute="trailing" secondItem="f2q-Si-QzC" secondAttribute="trailing" constant="16" id="O03-rl-0hO"/>
                                             <constraint firstItem="f2q-Si-QzC" firstAttribute="top" secondItem="4t9-yX-wOk" secondAttribute="bottom" constant="32" id="OeB-Le-e8Z"/>
                                             <constraint firstItem="4t9-yX-wOk" firstAttribute="leading" secondItem="KlO-xV-g3a" secondAttribute="leading" constant="16" id="RPu-Yq-4HO"/>
                                             <constraint firstItem="4t9-yX-wOk" firstAttribute="top" secondItem="KlO-xV-g3a" secondAttribute="top" constant="16" id="Udh-Yx-7GK"/>
-                                            <constraint firstItem="Xx0-1h-jbl" firstAttribute="top" secondItem="Xb1-N9-u6q" secondAttribute="bottom" constant="16" id="XUD-mP-VHl"/>
-                                            <constraint firstAttribute="bottom" secondItem="Xx0-1h-jbl" secondAttribute="bottom" constant="16" id="YO0-bJ-6QG"/>
-                                            <constraint firstItem="Xx0-1h-jbl" firstAttribute="leading" secondItem="KlO-xV-g3a" secondAttribute="leading" constant="16" id="aX7-nB-w8f"/>
                                             <constraint firstAttribute="trailing" secondItem="4t9-yX-wOk" secondAttribute="trailing" constant="16" id="bBI-aD-3Kv"/>
+                                            <constraint firstItem="jr1-5b-B5O" firstAttribute="trailing" secondItem="Xb1-N9-u6q" secondAttribute="trailing" id="ljC-bO-jdy"/>
+                                            <constraint firstItem="jr1-5b-B5O" firstAttribute="leading" secondItem="Xb1-N9-u6q" secondAttribute="leading" id="nHL-75-z14"/>
                                             <constraint firstItem="Xb1-N9-u6q" firstAttribute="top" secondItem="f2q-Si-QzC" secondAttribute="bottom" constant="16" id="nZq-C5-seM"/>
                                             <constraint firstItem="Xb1-N9-u6q" firstAttribute="trailing" secondItem="f2q-Si-QzC" secondAttribute="trailing" id="ndE-ZP-HGP"/>
-                                            <constraint firstAttribute="trailing" secondItem="Xx0-1h-jbl" secondAttribute="trailing" constant="16" id="tAu-4J-nZr"/>
+                                            <constraint firstAttribute="bottom" secondItem="jr1-5b-B5O" secondAttribute="bottom" id="oHR-0a-GN9"/>
                                             <constraint firstItem="f2q-Si-QzC" firstAttribute="leading" secondItem="KlO-xV-g3a" secondAttribute="leading" constant="16" id="yIe-fW-wG7"/>
                                         </constraints>
                                     </view>
@@ -601,7 +563,6 @@
                         <outlet property="detailView" destination="jr1-5b-B5O" id="E9R-T8-jj0"/>
                         <outlet property="foodDescription" destination="Xb1-N9-u6q" id="4pB-LF-1e1"/>
                         <outlet property="foodTitle" destination="f2q-Si-QzC" id="FB6-Rm-dIa"/>
-                        <outlet property="loadingView" destination="pBt-aD-XAC" id="fh6-lb-dKv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m04-fP-LGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -31,6 +31,7 @@
 		AD8761002A8BB8C500419784 /* ChatOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8760FF2A8BB8C500419784 /* ChatOption.swift */; };
 		AD898E6D2A9F6B2000CC70D2 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD898E6C2A9F6B2000CC70D2 /* RecipeDetailViewController.swift */; };
 		AD898E6F2A9F702400CC70D2 /* PanesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD898E6E2A9F702400CC70D2 /* PanesManager.swift */; };
+		AD8A0AAA2AA0D72B0040DD64 /* UIView-Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = AD8A0AA92AA0D72B0040DD64 /* UIView-Shimmer */; };
 		AD8A369A2A88B989007842FE /* ChatOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8A36992A88B989007842FE /* ChatOptionsTableViewCell.swift */; };
 		AD8A369E2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8A369D2A88C830007842FE /* ChatOptionsCollectionViewLayout.swift */; };
 		AD8C11DF2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8C11DE2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift */; };
@@ -117,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADB6C02C2A7E2223004D8E04 /* DifferenceKit in Frameworks */,
+				AD8A0AAA2AA0D72B0040DD64 /* UIView-Shimmer in Frameworks */,
 				AD8DA8912A72D65D0011B2B3 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +319,7 @@
 			packageProductDependencies = (
 				AD8DA8902A72D65D0011B2B3 /* Lottie */,
 				ADB6C02B2A7E2223004D8E04 /* DifferenceKit */,
+				AD8A0AA92AA0D72B0040DD64 /* UIView-Shimmer */,
 			);
 			productName = "Khana Khas";
 			productReference = AD46E97C2A6B9E4D003D94AC /* Khana Khas.app */;
@@ -393,6 +396,7 @@
 			packageReferences = (
 				AD8DA88F2A72D65D0011B2B3 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				ADB6C02A2A7E2223004D8E04 /* XCRemoteSwiftPackageReference "DifferenceKit" */,
+				AD8A0AA82AA0D72B0040DD64 /* XCRemoteSwiftPackageReference "UIView-Shimmer" */,
 			);
 			productRefGroup = AD46E97D2A6B9E4D003D94AC /* Products */;
 			projectDirPath = "";
@@ -806,6 +810,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AD8A0AA82AA0D72B0040DD64 /* XCRemoteSwiftPackageReference "UIView-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/omerfarukozturk/UIView-Shimmer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		AD8DA88F2A72D65D0011B2B3 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
@@ -825,6 +837,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AD8A0AA92AA0D72B0040DD64 /* UIView-Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD8A0AA82AA0D72B0040DD64 /* XCRemoteSwiftPackageReference "UIView-Shimmer" */;
+			productName = "UIView-Shimmer";
+		};
 		AD8DA8902A72D65D0011B2B3 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AD8DA88F2A72D65D0011B2B3 /* XCRemoteSwiftPackageReference "lottie-spm" */;
