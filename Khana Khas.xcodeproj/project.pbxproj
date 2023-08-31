@@ -41,6 +41,9 @@
 		AD92E5A92A9CF9B1006FF5DB /* FoodRecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD92E5A82A9CF9B1006FF5DB /* FoodRecipeTableViewCell.swift */; };
 		AD92E5AB2A9CFADB006FF5DB /* ChatFoodRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD92E5AA2A9CFADB006FF5DB /* ChatFoodRecipes.swift */; };
 		AD92E5AD2A9D087B006FF5DB /* khadvi.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AD92E5AC2A9D087B006FF5DB /* khadvi.jpeg */; };
+		AD985B452AA0DC4200321D57 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD985B442AA0DC4200321D57 /* ImageManager.swift */; };
+		AD985B472AA0DD0300321D57 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD985B462AA0DD0300321D57 /* NetworkManager.swift */; };
+		AD985B492AA0E16600321D57 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD985B482AA0E16600321D57 /* NotificationManager.swift */; };
 		ADB6C02C2A7E2223004D8E04 /* DifferenceKit in Frameworks */ = {isa = PBXBuildFile; productRef = ADB6C02B2A7E2223004D8E04 /* DifferenceKit */; };
 		ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */; };
 		ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */; };
@@ -104,6 +107,9 @@
 		AD92E5A82A9CF9B1006FF5DB /* FoodRecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecipeTableViewCell.swift; sourceTree = "<group>"; };
 		AD92E5AA2A9CFADB006FF5DB /* ChatFoodRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFoodRecipes.swift; sourceTree = "<group>"; };
 		AD92E5AC2A9D087B006FF5DB /* khadvi.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = khadvi.jpeg; sourceTree = "<group>"; };
+		AD985B442AA0DC4200321D57 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		AD985B462AA0DD0300321D57 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AD985B482AA0E16600321D57 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrenceManager.swift; sourceTree = "<group>"; };
 		ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entry.storyboard; sourceTree = "<group>"; };
@@ -296,6 +302,9 @@
 				ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */,
 				AD5AC0792A91E08600E4A4F9 /* FoodSuggestionManager.swift */,
 				AD898E6E2A9F702400CC70D2 /* PanesManager.swift */,
+				AD985B442AA0DC4200321D57 /* ImageManager.swift */,
+				AD985B462AA0DD0300321D57 /* NetworkManager.swift */,
+				AD985B482AA0E16600321D57 /* NotificationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -452,10 +461,12 @@
 				AD8761002A8BB8C500419784 /* ChatOption.swift in Sources */,
 				ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */,
 				ADF27DD92A92186B0035B1A4 /* ChatTableViewCell.swift in Sources */,
+				AD985B452AA0DC4200321D57 /* ImageManager.swift in Sources */,
 				AD46E9842A6B9E4D003D94AC /* MainTableViewController.swift in Sources */,
 				AD5AC07C2A91E42F00E4A4F9 /* ChatLoadingTableViewCell.swift in Sources */,
 				AD8A369A2A88B989007842FE /* ChatOptionsTableViewCell.swift in Sources */,
 				AD46E9802A6B9E4D003D94AC /* AppDelegate.swift in Sources */,
+				AD985B472AA0DD0300321D57 /* NetworkManager.swift in Sources */,
 				AD46E9822A6B9E4D003D94AC /* SceneDelegate.swift in Sources */,
 				AD8C11DF2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift in Sources */,
 				AD8760F92A8BB86C00419784 /* ChatItem.swift in Sources */,
@@ -465,6 +476,7 @@
 				AD8760FE2A8BB8AF00419784 /* ChatAnswer.swift in Sources */,
 				AD0663662A7626B000C29E82 /* ChatAnswerTableViewCell.swift in Sources */,
 				AD898E6D2A9F6B2000CC70D2 /* RecipeDetailViewController.swift in Sources */,
+				AD985B492AA0E16600321D57 /* NotificationManager.swift in Sources */,
 				ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */,
 				AD0085BA2A9A258500B86793 /* IngredientsTableViewController.swift in Sources */,
 				AD92E5A92A9CF9B1006FF5DB /* FoodRecipeTableViewCell.swift in Sources */,

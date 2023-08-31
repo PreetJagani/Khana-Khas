@@ -49,10 +49,30 @@ class FoodRecipeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var des: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    var recipe: Recipe?
     
     func refresh(recipe: Recipe) {
+        self.recipe = recipe
         self.title.text = recipe.title
         self.des.text = recipe.des
+        self.refreshImage()
+    }
+    
+    @objc func refreshImage() {
+        ImageManager.shared.getImage(name: recipe?.title ?? "") {[weak self] image in
+            guard let urls = image["urls"] as? [String: Any], let url = urls["thumb"] as? String else {
+                return
+            }
+            NetworkManager.shared.getImage(url: url) { image in
+                guard let image else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self?.imageView.image = image
+                }
+            }
+        }
     }
     
 }

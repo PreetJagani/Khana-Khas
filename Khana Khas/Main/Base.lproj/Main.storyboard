@@ -287,7 +287,7 @@
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="khadvi.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Sdz-rM-fka">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sdz-rM-fka">
                                                                         <rect key="frame" x="170" y="16" width="44" height="44"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="44" id="98r-Sd-rLs"/>
@@ -346,6 +346,7 @@
                                                     <size key="customSize" width="230" height="230"/>
                                                     <connections>
                                                         <outlet property="des" destination="Gbo-Ig-EOd" id="SHe-Su-V9Q"/>
+                                                        <outlet property="imageView" destination="Sdz-rM-fka" id="kLY-wd-Qao"/>
                                                         <outlet property="title" destination="nqa-2g-3iU" id="24d-gv-tbt"/>
                                                     </connections>
                                                 </collectionViewCell>
