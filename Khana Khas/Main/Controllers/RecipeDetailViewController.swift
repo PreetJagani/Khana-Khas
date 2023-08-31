@@ -12,6 +12,7 @@ class RecipeDetailViewController: UIViewController {
 
     @IBOutlet weak var foodTitle: UILabel!
     @IBOutlet weak var foodDescription: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var detailView: ShimmerView!
     
@@ -29,6 +30,23 @@ class RecipeDetailViewController: UIViewController {
         self.foodDescription.text = recipe?.des
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.detailView.setTemplateWithSubviews(false)
+        }
+        ImageManager.shared.getImage(name: recipe?.title ?? "") {[weak self] image in
+            guard let urls = image["urls"] as? [String: Any], let url = urls["full"] as? String, let blurHash = image["blur_hash"] as? String else {
+                return
+            }
+            let blurImage = UIImage(blurHash: blurHash, size: self?.imageView.frame.size ?? .zero)
+            DispatchQueue.main.async {
+                self?.imageView.image = blurImage
+            }
+            NetworkManager.shared.getImage(url: url) { image in
+                guard let image else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self?.imageView.image = image
+                }
+            }
         }
     }
 }

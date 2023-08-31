@@ -44,6 +44,7 @@
 		AD985B452AA0DC4200321D57 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD985B442AA0DC4200321D57 /* ImageManager.swift */; };
 		AD985B472AA0DD0300321D57 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD985B462AA0DD0300321D57 /* NetworkManager.swift */; };
 		AD985B492AA0E16600321D57 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD985B482AA0E16600321D57 /* NotificationManager.swift */; };
+		AD985B4C2AA0F6C900321D57 /* BlurHashDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD985B4B2AA0F6C900321D57 /* BlurHashDecode.swift */; };
 		ADB6C02C2A7E2223004D8E04 /* DifferenceKit in Frameworks */ = {isa = PBXBuildFile; productRef = ADB6C02B2A7E2223004D8E04 /* DifferenceKit */; };
 		ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */; };
 		ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */; };
@@ -110,6 +111,7 @@
 		AD985B442AA0DC4200321D57 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		AD985B462AA0DD0300321D57 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AD985B482AA0E16600321D57 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		AD985B4B2AA0F6C900321D57 /* BlurHashDecode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurHashDecode.swift; sourceTree = "<group>"; };
 		ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrenceManager.swift; sourceTree = "<group>"; };
 		ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entry.storyboard; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				AD8DA8922A72D6B00011B2B3 /* Assets */,
 				AD46E9AF2A6B9E8B003D94AC /* Onboard */,
 				AD0663622A76256F00C29E82 /* Main */,
+				AD985B4A2AA0F6B700321D57 /* Helper */,
 				AD46E97F2A6B9E4D003D94AC /* AppDelegate.swift */,
 				AD46E9812A6B9E4D003D94AC /* SceneDelegate.swift */,
 				AD46E9882A6B9E4E003D94AC /* Assets.xcassets */,
@@ -294,6 +297,14 @@
 				AD92E5AC2A9D087B006FF5DB /* khadvi.jpeg */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		AD985B4A2AA0F6B700321D57 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AD985B4B2AA0F6C900321D57 /* BlurHashDecode.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		ADB73DCC2A74D99E007D53E9 /* Managers */ = {
@@ -466,6 +477,7 @@
 				AD5AC07C2A91E42F00E4A4F9 /* ChatLoadingTableViewCell.swift in Sources */,
 				AD8A369A2A88B989007842FE /* ChatOptionsTableViewCell.swift in Sources */,
 				AD46E9802A6B9E4D003D94AC /* AppDelegate.swift in Sources */,
+				AD985B4C2AA0F6C900321D57 /* BlurHashDecode.swift in Sources */,
 				AD985B472AA0DD0300321D57 /* NetworkManager.swift in Sources */,
 				AD46E9822A6B9E4D003D94AC /* SceneDelegate.swift in Sources */,
 				AD8C11DF2A8B74DA00EE1876 /* ChatOptionCollectionViewCell.swift in Sources */,

@@ -24,17 +24,17 @@ class ChatViewModel: NSObject {
     var activeIngredients: [Ingredient]?
     
     func start() {
-//        self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Good Morning! How Can I assist you today?"))
-//        self.pendingItems.append(ChatOptions(id: self.nextId(), text: "options", options: [
-//            ChatOption(text: "🥞 Breakfast", rowNumber: 0),
-//            ChatOption(text: "🥪 Snacks", rowNumber: 1),
-//            ChatOption(text: "🥘 Dinner", rowNumber: 2),
-//            ChatOption(text: "🍽️ Lunch", rowNumber: 2)
-//        ], rows: 3))
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            self.appendNextItemIfNeeded()
-//        }
-        self.generateAnswer()
+        self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Good Morning! How Can I assist you today?"))
+        self.pendingItems.append(ChatOptions(id: self.nextId(), text: "options", options: [
+            ChatOption(text: "🥞 Breakfast", rowNumber: 0),
+            ChatOption(text: "🥪 Snacks", rowNumber: 1),
+            ChatOption(text: "🥘 Dinner", rowNumber: 2),
+            ChatOption(text: "🍽️ Lunch", rowNumber: 2)
+        ], rows: 3))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.appendNextItemIfNeeded()
+        }
+//        self.generateAnswer()
     }
     
     func nextId() -> Int {

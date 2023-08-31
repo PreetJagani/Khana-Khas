@@ -452,7 +452,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlO-xV-g3a">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="581"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="khadvi.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="4t9-yX-wOk">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4t9-yX-wOk">
                                                 <rect key="frame" x="16" y="16" width="361" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="EdM-a1-IHh"/>
@@ -564,6 +564,7 @@
                         <outlet property="detailView" destination="jr1-5b-B5O" id="E9R-T8-jj0"/>
                         <outlet property="foodDescription" destination="Xb1-N9-u6q" id="4pB-LF-1e1"/>
                         <outlet property="foodTitle" destination="f2q-Si-QzC" id="FB6-Rm-dIa"/>
+                        <outlet property="imageView" destination="4t9-yX-wOk" id="h4I-fp-cbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m04-fP-LGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -572,7 +573,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="khadvi.jpeg" width="181" height="125"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
