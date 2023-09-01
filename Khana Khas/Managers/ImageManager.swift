@@ -9,7 +9,7 @@ import UIKit
 
 class ImageManager: NSObject {
     
-    private let url = "http://localhost:8000/photo"
+    private let url = "http://192.168.54.147:8000/photo"
     
     static let shared = ImageManager()
     

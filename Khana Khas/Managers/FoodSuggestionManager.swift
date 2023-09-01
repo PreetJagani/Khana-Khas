@@ -8,7 +8,9 @@
 import UIKit
 import DifferenceKit
 
-let url = "http://localhost:8000/suggest"
+let url = "http://192.168.54.147:8000"
+let suggestUrl = "\(url)/suggest"
+let detailUrl = "\(url)/detail"
 
 enum IngredientType: Int {
     case All = 0
@@ -89,13 +91,14 @@ class IngredientData {
 class FoodSuggestionManager: NSObject {
     
     static let shared = FoodSuggestionManager()
+    private var recipeDetailCache: [String: [String: Any]] = [:]
     
     private override init() {
         
     }
     
     func suggestFood(foodTime: String, foodType: String, ingredients: String, completion: @escaping (Dictionary<String, Any>, Error?) -> Void) {
-        if let url = URL(string: url) {
+        if let url = URL(string: suggestUrl) {
             let session = URLSession.shared
             
             var request = URLRequest(url: url)
@@ -151,7 +154,7 @@ class FoodSuggestionManager: NSObject {
         
         var sectionMap : [String : IngredientSection] = [:]
         for food in FoodSuggestionManager.ingredientsList {
-            if (type == .All || food.type == type), food.name.hasPrefix(searchString) {
+            if (type == .All || food.type == type), food.name.anyHasPrefix(searchString) {
                 let header = food.name.first?.uppercased() ?? "A"
                 if let section = sectionMap[header] {
                     section.items.append(food)
@@ -163,6 +166,43 @@ class FoodSuggestionManager: NSObject {
             }
         }
         return IngredientData(sections: sections, sectionIndex: sectionMap.keys.sorted())
+    }
+    
+    func recipeDetail(name: String, info: String, completion: @escaping ([String: Any]) -> Void) {
+        if let detail = self.recipeDetailCache[name] {
+            completion(detail)
+            return
+        }
+        let post = ["recipe_name": name, "recipe_info": info]
+        
+        NetworkManager.shared.post(url: detailUrl, post: post) { json, error in
+            do {
+                if error == nil,
+                   let res = json["res"] as? String,
+                   let data = res.data(using: .utf8),
+                   let detail = try JSONSerialization.jsonObject(with: data) as? [String: Any] {
+                    self.recipeDetailCache[name] = detail
+                    completion(detail)
+                } else {
+                    completion([:])
+                }
+            } catch let error {
+                print(error)
+                completion([:])
+            }
+        }
+    }
+}
+
+extension String {
+    func anyHasPrefix(_ prefix: String) -> Bool {
+        let words = self.split(separator: " ")
+        for word in words {
+            if word.lowercased().hasPrefix(prefix.lowercased()) {
+                return true
+            }
+        }
+        return false
     }
 }
 
