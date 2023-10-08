@@ -80,6 +80,8 @@ extension MainTableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let customCell = cell as? ChatTableViewCell {
             customCell.animateFromBottom { _ in
+                tableView.beginUpdates()
+                tableView.endUpdates()
                 self.model?.appendNextItemIfNeeded()
             }
         } else {

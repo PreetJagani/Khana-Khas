@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tBj-LT-VW7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tBj-LT-VW7">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -169,11 +170,14 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="O8o-DB-JbS" firstAttribute="top" secondItem="fPb-6Z-GF7" secondAttribute="top" constant="4" id="2Sr-Ds-Osc"/>
-                                        <constraint firstAttribute="bottom" secondItem="O8o-DB-JbS" secondAttribute="bottom" constant="4" id="3sZ-zZ-rRQ"/>
                                         <constraint firstItem="O8o-DB-JbS" firstAttribute="leading" secondItem="fPb-6Z-GF7" secondAttribute="leading" constant="16" id="D4t-r7-XtR"/>
                                         <constraint firstItem="O8o-DB-JbS" firstAttribute="width" secondItem="fPb-6Z-GF7" secondAttribute="width" multiplier="0.7" priority="999" id="Ntg-sj-dWx"/>
+                                        <constraint firstAttribute="bottom" secondItem="O8o-DB-JbS" secondAttribute="bottom" constant="4" id="n4t-bJ-aRD"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animateOnlyAlpha" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="collectionView" destination="O8o-DB-JbS" id="9Jm-89-8TC"/>
                                 </connections>
@@ -186,10 +190,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j4m-9b-N3G">
-                                            <rect key="frame" x="16" y="0.0" width="72" height="48"/>
+                                            <rect key="frame" x="16" y="4" width="72" height="36"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibx-oa-5wJ" userLabel="One">
-                                                    <rect key="frame" x="16" y="20" width="8" height="8"/>
+                                                    <rect key="frame" x="16" y="14" width="8" height="8"/>
                                                     <color key="backgroundColor" systemColor="labelColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="8" id="3pz-aG-Htx"/>
@@ -202,11 +206,12 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIv-EW-FhK" userLabel="Two">
-                                                    <rect key="frame" x="32" y="20" width="8" height="8"/>
+                                                    <rect key="frame" x="32" y="14" width="8" height="8"/>
                                                     <color key="backgroundColor" systemColor="labelColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="RIv-EW-FhK" secondAttribute="height" multiplier="1:1" id="A6S-MD-cyw"/>
                                                         <constraint firstAttribute="width" constant="8" id="X7z-eV-A7b"/>
+                                                        <constraint firstAttribute="width" secondItem="RIv-EW-FhK" secondAttribute="height" multiplier="1:1" id="sxM-h7-PIC"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -215,10 +220,11 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5O-se-fnN" userLabel="Three">
-                                                    <rect key="frame" x="48" y="20" width="8" height="8"/>
+                                                    <rect key="frame" x="48" y="14" width="8" height="8"/>
                                                     <color key="backgroundColor" systemColor="labelColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="T5O-se-fnN" secondAttribute="height" multiplier="1:1" id="Cfz-xZ-Kq3"/>
+                                                        <constraint firstAttribute="width" secondItem="T5O-se-fnN" secondAttribute="height" multiplier="1:1" id="Tjz-ay-kEp"/>
                                                         <constraint firstAttribute="width" constant="8" id="jGh-e8-Mwo"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -230,9 +236,7 @@
                                             </subviews>
                                             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstItem="T5O-se-fnN" firstAttribute="width" secondItem="T5O-se-fnN" secondAttribute="height" multiplier="1:1" id="Tjz-ay-kEp"/>
                                                 <constraint firstAttribute="height" constant="36" id="Ylm-qL-Scw"/>
-                                                <constraint firstItem="RIv-EW-FhK" firstAttribute="width" secondItem="RIv-EW-FhK" secondAttribute="height" multiplier="1:1" id="sxM-h7-PIC"/>
                                             </constraints>
                                             <edgeInsets key="layoutMargins" top="12" left="16" bottom="12" right="16"/>
                                             <userDefinedRuntimeAttributes>
@@ -244,13 +248,14 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="j4m-9b-N3G" firstAttribute="leading" secondItem="P7u-f2-5yU" secondAttribute="leading" constant="16" id="6Lb-oI-9cR"/>
-                                        <constraint firstAttribute="bottom" secondItem="j4m-9b-N3G" secondAttribute="bottom" id="EdA-BT-o66"/>
-                                        <constraint firstItem="j4m-9b-N3G" firstAttribute="top" secondItem="P7u-f2-5yU" secondAttribute="top" id="QH9-IM-9gT"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="j4m-9b-N3G" secondAttribute="bottom" constant="4" id="EdA-BT-o66"/>
+                                        <constraint firstItem="j4m-9b-N3G" firstAttribute="top" secondItem="P7u-f2-5yU" secondAttribute="top" constant="4" id="QH9-IM-9gT"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="one" destination="ibx-oa-5wJ" id="ShH-BP-uKy"/>
                                     <outlet property="three" destination="T5O-se-fnN" id="Bxf-Ur-GDT"/>
+                                    <outlet property="top" destination="QH9-IM-9gT" id="8GC-c9-ttj"/>
                                     <outlet property="two" destination="RIv-EW-FhK" id="IKk-QJ-L2g"/>
                                 </connections>
                             </tableViewCell>
@@ -360,6 +365,9 @@
                                         <constraint firstAttribute="trailing" secondItem="GUT-Ie-Wk1" secondAttribute="trailing" id="vnK-TG-OSm"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animateOnlyAlpha" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="collectionView" destination="GUT-Ie-Wk1" id="uVw-fL-fg2"/>
                                 </connections>
@@ -384,14 +392,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="item" id="Zbi-Lz-8st" customClass="IngredientItemTableViewCell" customModule="Khana_Khas" customModuleProvider="target">
-                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="43.666667938232422"/>
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zbi-Lz-8st" id="Oej-Pa-Z6J">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cl3-jH-W98">
-                                            <rect key="frame" x="20" y="11.000000000000002" width="313" height="21.666666666666671"/>
+                                            <rect key="frame" x="20" y="11" width="313" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -576,25 +584,25 @@
     </scenes>
     <resources>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

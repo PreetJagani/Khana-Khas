@@ -13,7 +13,7 @@ protocol ChatOptionDelegate : AnyObject {
     func shouldSelectOption(option: ChatOption) -> Bool
 }
 
-class ChatOptionsTableViewCell: UITableViewCell {
+class ChatOptionsTableViewCell: ChatTableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var items : [ChatOption] = []

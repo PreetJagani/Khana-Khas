@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChatLoadingTableViewCell: UITableViewCell {
+class ChatLoadingTableViewCell: ChatTableViewCell {
 
     @IBOutlet weak var one: UIView!
     @IBOutlet weak var two: UIView!

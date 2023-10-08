@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FoodRecipeTableViewCell: UITableViewCell {
+class FoodRecipeTableViewCell: ChatTableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var items: [Recipe] = []
