@@ -16,6 +16,10 @@ class Recipe: NSObject {
         self.title = title
         self.des = des
     }
+    
+    override var description: String {
+        return self.title
+    }
 }
 
 class ChatFoodRecipes: ChatItem {

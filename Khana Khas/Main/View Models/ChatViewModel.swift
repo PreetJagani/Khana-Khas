@@ -21,9 +21,10 @@ class ChatViewModel: NSObject {
     
     var activeOption: ChatOption?
     var activeIngredients: [Ingredient]?
+    var generatedRecipes: [Recipe] = []
     
-    func start() {
-        self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Good Morning! How Can I assist you today?"))
+    func start(includeGreetings: Bool = true) {
+        self.pendingItems.append(ChatAnswer(id: self.nextId(), text: (includeGreetings ? "Good Morning! " : "") + "How Can I assist you today?"))
         self.pendingItems.append(ChatOptions(id: self.nextId(), text: "options", options: [
             ChatOption(text: "🥞 Breakfast", rowNumber: 0),
             ChatOption(text: "🥪 Snacks", rowNumber: 1),
@@ -88,7 +89,7 @@ class ChatViewModel: NSObject {
         self.generateAnswer()
     }
     
-    func generateAnswer() {
+    func generateAnswer(excludeRecipes: [Recipe] = []) {
         self.pendingItems.append(ChatItem.loadingItem)
         self.appendNextItemIfNeeded()
         var foodTime = self.activeOption?.text ?? "  Dinner"
@@ -114,13 +115,37 @@ class ChatViewModel: NSObject {
                 self.removeLoadingItem()
                 
                 if foodRecipe.count > 0 {
+                    self.generatedRecipes.append(contentsOf: foodRecipe)
                     self.pendingItems.append(ChatFoodRecipes(id: self.nextId(), text: "Recipe", recipes: foodRecipe))
                 } else {
                     self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Opps! Something went wrong"))
                 }
-                self.appendNextItemIfNeeded()                
+                self.addRegenerateOptions()
+                self.appendNextItemIfNeeded()
             }
         }
+    }
+    
+    // i fail can merge two answer item and give try again instead of more recipes
+    func addRegenerateOptions() {
+        self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Can I assist with anything else?"))
+        self.pendingItems.append(ChatOptions(id: self.nextId(), text: "Regenerate", options: [
+            ChatOption(text: "Start over", rowNumber: 0),
+            ChatOption(text: "More recipes", rowNumber: 0),
+//            ChatOption(text: "Edit meal time", rowNumber: 1),
+            ChatOption(text: "Edit ingredients", rowNumber: 1)
+        ], rows: 2))
+    }
+    
+    func generateQuestionForRegenerate(option: ChatOption) {
+        if option.text == "Start over" {
+            self.pendingItems.append(ChatQuestion(id: self.nextId(), text: "Start over"))
+            self.start(includeGreetings: false)
+        } else if option.text == "More recipes" {
+            self.pendingItems.append(ChatQuestion(id: self.nextId(), text: "More recipes"))
+            self.generateAnswer(excludeRecipes: self.generatedRecipes)
+        }
+        self.appendNextItemIfNeeded()
     }
     
     func removeLoadingItem() {

@@ -15,6 +15,7 @@ class ChatItem : NSObject, Differentiable {
     
     let id: Int
     let text: String
+    var completeAnimation = false
     
     init(id: Int, text: String) {
         self.id = id

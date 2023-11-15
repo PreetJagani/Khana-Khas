@@ -97,7 +97,7 @@ class FoodSuggestionManager: NSObject {
         
     }
     
-    func suggestFood(foodTime: String, foodType: String, ingredients: String, completion: @escaping (Dictionary<String, Any>, Error?) -> Void) {
+    func suggestFood(foodTime: String, foodType: String, ingredients: String, excludeRecipes: [Recipe] = [], completion: @escaping (Dictionary<String, Any>, Error?) -> Void) {
         if let url = URL(string: suggestUrl) {
             let session = URLSession.shared
             
@@ -107,7 +107,8 @@ class FoodSuggestionManager: NSObject {
             let jsonBody: [String: Any] = [
                 "food_time": foodTime,
                 "food_type": foodType,
-                "ingredients": ingredients
+                "ingredients": ingredients,
+                "exclude": excludeRecipes.description
             ]
             
             do {

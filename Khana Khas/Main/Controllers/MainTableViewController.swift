@@ -78,6 +78,10 @@ extension MainTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let item = self.items[indexPath.row]
+        if item.completeAnimation {
+            return
+        }
         if let customCell = cell as? ChatTableViewCell {
             customCell.animateFromBottom { _ in
                 tableView.beginUpdates()
@@ -87,6 +91,7 @@ extension MainTableViewController {
         } else {
             model?.appendNextItemIfNeeded()
         }
+        item.completeAnimation = true
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -119,6 +124,8 @@ extension MainTableViewController : ChatViewModelDelegate, ChatOptionDelegate, I
                 }
                 self.navigationController?.present(navVc, animated: true)
             }
+        } else if (title == "Regenerate") {
+            model?.generateQuestionForRegenerate(option: option)
         } else {
             model?.generateQuestion(option: option)
         }
