@@ -80,6 +80,9 @@ extension MainTableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let item = self.items[indexPath.row]
         if item.completeAnimation {
+            if let customCell = cell as? ChatTableViewCell {
+                customCell.restorePosition()
+            }
             return
         }
         if let customCell = cell as? ChatTableViewCell {

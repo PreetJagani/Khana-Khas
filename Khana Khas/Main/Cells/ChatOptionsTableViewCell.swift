@@ -15,7 +15,7 @@ protocol ChatOptionDelegate : AnyObject {
 
 class ChatOptionsTableViewCell: ChatTableViewCell {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var collectionView: UICollectionView!
     var items : [ChatOption] = []
     var rowCountCache : [Int : Int] = [:]
     var layout : ChatOptionsCollectionViewLayout?
@@ -27,7 +27,6 @@ class ChatOptionsTableViewCell: ChatTableViewCell {
         super.awakeFromNib()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        self.collectionView.reloadData()
         
         layout = ChatOptionsCollectionViewLayout()
         if let layout {
@@ -47,6 +46,7 @@ class ChatOptionsTableViewCell: ChatTableViewCell {
         }
         
         layout?.rowsCount = options.rows + 1
+        self.collectionView.reloadData()
     }
     
     func addOption(option: ChatOption) {

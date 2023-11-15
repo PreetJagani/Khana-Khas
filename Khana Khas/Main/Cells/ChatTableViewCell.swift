@@ -23,13 +23,16 @@ class ChatTableViewCell: UITableViewCell {
     
     func animateFromBottom(completion: @escaping (Bool) -> Void) {
         UIView.animate(withDuration: 0.5, delay: 0, options: .transitionCurlDown, animations: {
-            self.contentView.alpha = 1
-            if !self.animateOnlyAlpha {
-                self.top.constant = 4
-                self.layoutIfNeeded()
-            }
+            self.restorePosition()
         }, completion: completion)
-        
+    }
+    
+    func restorePosition() {
+        self.contentView.alpha = 1
+        if !self.animateOnlyAlpha {
+            self.top.constant = 4
+            self.layoutIfNeeded()
+        }
     }
     
 }
