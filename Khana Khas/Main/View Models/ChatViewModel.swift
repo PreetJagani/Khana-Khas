@@ -139,6 +139,8 @@ class ChatViewModel: NSObject {
     
     func generateQuestionForRegenerate(option: ChatOption) {
         if option.text == "Start over" {
+            self.activeOption = nil
+            self.activeIngredients = nil
             self.pendingItems.append(ChatQuestion(id: self.nextId(), text: "Start over"))
             self.start(includeGreetings: false)
         } else if option.text == "More recipes" {

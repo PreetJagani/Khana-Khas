@@ -113,29 +113,42 @@ extension MainTableViewController : ChatViewModelDelegate, ChatOptionDelegate, I
         self.refresh()
     }
     
-    func didSelectOption(title: String, option: ChatOption) {
-        if (title == "Ingredients") {
-            if let item = self.items.last as? ChatOptions, item.text == "Ingredients" {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let navVc = storyboard.instantiateViewController(withIdentifier: "ingredients") as! UINavigationController
-                
-                if let ingredientsVc = navVc.viewControllers[0] as? IngredientsTableViewController {
-                    ingredientsVc.ingredientsDelegate = self
-                }
-                self.navigationController?.present(navVc, animated: true)
+    func didSelectOption(chatOptions: ChatOptions, option: ChatOption) {
+        if self.items.last != chatOptions {
+            return
+        }
+        if (chatOptions.text == "Ingredients") {
+            self.showIngredientsVc()
+        } else if (chatOptions.text == "Regenerate") {
+            if option.text == "Edit ingredients" {
+                self.showIngredientsVc()
+            } else {
+                model?.generateQuestionForRegenerate(option: option)
             }
-        } else if (title == "Regenerate") {
-            model?.generateQuestionForRegenerate(option: option)
         } else {
             model?.generateQuestion(option: option)
         }
     }
     
-    func shouldSelectOption(option: ChatOption) -> Bool {
-        if (option.text == "Ingredients") {
+    func showIngredientsVc() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navVc = storyboard.instantiateViewController(withIdentifier: "ingredients") as! UINavigationController
+        
+        if let ingredientsVc = navVc.viewControllers[0] as? IngredientsTableViewController {
+            ingredientsVc.ingredientsDelegate = self
+            ingredientsVc.selectedItems = Set(model?.activeIngredients ?? [])
+        }
+        self.navigationController?.present(navVc, animated: true)
+    }
+    
+    func shouldSelectOption(chatOptions: ChatOptions, optionTitle: String) -> Bool {
+        if optionTitle == "Ingredients" {
             return false
         }
-        return true
+        if optionTitle == "Edit ingredients" {
+            return false
+        }
+        return self.items.last == chatOptions
     }
     
     func didSelectIngredient(ingredients: [Ingredient]) {

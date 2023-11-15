@@ -8,9 +8,9 @@
 import UIKit
 
 protocol ChatOptionDelegate : AnyObject {
-    func didSelectOption(title: String, option: ChatOption)
+    func didSelectOption(chatOptions: ChatOptions, option: ChatOption)
     
-    func shouldSelectOption(option: ChatOption) -> Bool
+    func shouldSelectOption(chatOptions: ChatOptions, optionTitle: String) -> Bool
 }
 
 class ChatOptionsTableViewCell: ChatTableViewCell {
@@ -82,8 +82,8 @@ extension ChatOptionsTableViewCell : UICollectionViewDataSource, UICollectionVie
             return
         }
         let item = self.items[indexPath.row]
-        optionsDelegate?.didSelectOption(title: options?.text ?? "", option: item)
-        if (!(self.optionsDelegate?.shouldSelectOption(option: item) ?? true)) {
+        optionsDelegate?.didSelectOption(chatOptions: self.options!, option: item)
+        if (!(self.optionsDelegate?.shouldSelectOption(chatOptions: self.options!, optionTitle: item.text) ?? true)) {
             return
         }
         self.options?.selectedIndex = indexPath.row
