@@ -8,7 +8,7 @@
 import UIKit
 import DifferenceKit
 
-let url = "http://192.168.13.147:8000"
+let url = "http://localhost:8000"
 let suggestUrl = "\(url)/suggest"
 let detailUrl = "\(url)/detail"
 

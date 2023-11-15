@@ -63,7 +63,7 @@ extension MainTableViewController {
             cell = tableView.dequeueReusableCell(withIdentifier: "options")!
             if let cell = cell as? ChatOptionsTableViewCell {
                 cell.optionsDelegate = self
-                cell.refresh(options: options)
+                cell.refresh(options: options, selectedIndex: options.selectedIndex)
             }
         } else if item.isKind(of: ChatFoodRecipes.self) {
             let recipes = item as! ChatFoodRecipes
@@ -108,13 +108,9 @@ extension MainTableViewController : ChatViewModelDelegate, ChatOptionDelegate, I
         self.refresh()
     }
     
-    func didSelectOption(option: ChatOption) {
-        model?.generateQuestion(option: option)
-    }
-    
-    func shouldSelectOption(option: ChatOption) -> Bool {
-        if (option.text == "Ingredients") {
-            if let item = self.items.last as? ChatOptions, item.text == "ingredients" {
+    func didSelectOption(title: String, option: ChatOption) {
+        if (title == "Ingredients") {
+            if let item = self.items.last as? ChatOptions, item.text == "Ingredients" {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let navVc = storyboard.instantiateViewController(withIdentifier: "ingredients") as! UINavigationController
                 
@@ -123,6 +119,13 @@ extension MainTableViewController : ChatViewModelDelegate, ChatOptionDelegate, I
                 }
                 self.navigationController?.present(navVc, animated: true)
             }
+        } else {
+            model?.generateQuestion(option: option)
+        }
+    }
+    
+    func shouldSelectOption(option: ChatOption) -> Bool {
+        if (option.text == "Ingredients") {
             return false
         }
         return true

@@ -16,7 +16,6 @@ class ChatViewModel: NSObject {
     var items : [ChatItem] = []
     var currId = 0
     var pendingItems : [ChatItem] = []
-    var currIndex = -1
     weak var modelDelegate : ChatViewModelDelegate? = nil
     var isAnimating : Bool = false
     
@@ -34,7 +33,6 @@ class ChatViewModel: NSObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.appendNextItemIfNeeded()
         }
-//        self.generateAnswer()
     }
     
     func nextId() -> Int {
@@ -43,20 +41,21 @@ class ChatViewModel: NSObject {
     }
     
     func appendNextItemIfNeeded() {
-        guard currIndex + 1 < self.pendingItems.count else {
+        guard self.pendingItems.count > 0 else {
             return
         }
         if self.isAnimating {
             return
         }
         self.isAnimating = true
-        self.currIndex += 1
-        self.items.append(self.pendingItems[currIndex])
+        let item = self.pendingItems.remove(at: 0)
+        self.items.append(item)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.isAnimating = false
             self.modelDelegate?.dataUpdated()
             self.appendNextItemIfNeeded()
         }
+        
     }
 
     func generateQuestion(option: ChatOption) {
@@ -72,7 +71,7 @@ class ChatViewModel: NSObject {
     
     func showChooseIngredients() {
         self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Sure, Select ingredients"))
-        self.pendingItems.append(ChatOptions(id: self.nextId(), text: "ingredients", options: [
+        self.pendingItems.append(ChatOptions(id: self.nextId(), text: "Ingredients", options: [
             ChatOption(text: "Ingredients", rowNumber: 0),
         ], rows: 1))
         self.appendNextItemIfNeeded()
@@ -95,9 +94,6 @@ class ChatViewModel: NSObject {
         var foodTime = self.activeOption?.text ?? "  Dinner"
         foodTime.removeFirst(2)
         FoodSuggestionManager.shared.suggestFood(foodTime: foodTime, foodType: "Gujarati", ingredients: self.activeIngredients?.description ?? "[]") { suggestions, error in
-            self.pendingItems.remove(at: self.currIndex)
-            self.items.remove(at: self.currIndex)
-            self.currIndex -= 1
             
             var foodRecipe: Array<Recipe> = []
             do {
@@ -114,9 +110,27 @@ class ChatViewModel: NSObject {
                 print(e)
             }
             
-            
-            self.pendingItems.append(ChatFoodRecipes(id: self.nextId(), text: "Recipe", recipes: foodRecipe))
-            self.appendNextItemIfNeeded()
+            DispatchQueue.main.async {
+                self.removeLoadingItem()
+                
+                if foodRecipe.count > 0 {
+                    self.pendingItems.append(ChatFoodRecipes(id: self.nextId(), text: "Recipe", recipes: foodRecipe))
+                } else {
+                    self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Opps! Something went wrong"))
+                }
+                self.appendNextItemIfNeeded()                
+            }
         }
+    }
+    
+    func removeLoadingItem() {
+        if let _ = pendingItems.last as? ChatLoadingItem {
+            pendingItems.removeLast()
+        }
+        
+        if let _ = items.last as? ChatLoadingItem {
+            items.removeLast()
+        }
+        self.modelDelegate?.dataUpdated()
     }
 }

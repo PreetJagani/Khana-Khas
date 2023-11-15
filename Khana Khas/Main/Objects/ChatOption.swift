@@ -22,10 +22,12 @@ class ChatOptions : ChatItem {
     
     let options : [ChatOption]
     let rows : Int
+    var selectedIndex: Int
     
-    init(id: Int, text: String, options: [ChatOption], rows: Int) {
+    init(id: Int, text: String, options: [ChatOption], rows: Int, selectedIndex: Int = -1) {
         self.options = options
         self.rows = rows
+        self.selectedIndex = selectedIndex
         super.init(id: id, text: text)
     }
 }

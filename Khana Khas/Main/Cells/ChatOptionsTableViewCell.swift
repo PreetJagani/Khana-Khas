@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ChatOptionDelegate : AnyObject {
-    func didSelectOption(option: ChatOption)
+    func didSelectOption(title: String, option: ChatOption)
     
     func shouldSelectOption(option: ChatOption) -> Bool
 }
@@ -20,6 +20,7 @@ class ChatOptionsTableViewCell: ChatTableViewCell {
     var rowCountCache : [Int : Int] = [:]
     var layout : ChatOptionsCollectionViewLayout?
     var selectedIndex = -1
+    weak var options: ChatOptions?
     weak var optionsDelegate : ChatOptionDelegate?
     
     override func awakeFromNib() {
@@ -35,7 +36,9 @@ class ChatOptionsTableViewCell: ChatTableViewCell {
         }
     }
     
-    func refresh(options: ChatOptions) {
+    func refresh(options: ChatOptions, selectedIndex: Int) {
+        self.selectedIndex = selectedIndex
+        self.options = options
         items.removeAll()
         rowCountCache = [:]
         
@@ -79,11 +82,11 @@ extension ChatOptionsTableViewCell : UICollectionViewDataSource, UICollectionVie
             return
         }
         let item = self.items[indexPath.row]
+        optionsDelegate?.didSelectOption(title: options?.text ?? "", option: item)
         if (!(self.optionsDelegate?.shouldSelectOption(option: item) ?? true)) {
             return
         }
-        optionsDelegate?.didSelectOption(option: item)
-        
+        self.options?.selectedIndex = indexPath.row
         selectedIndex = indexPath.row
         
         collectionView.reloadItems(at: [indexPath])
