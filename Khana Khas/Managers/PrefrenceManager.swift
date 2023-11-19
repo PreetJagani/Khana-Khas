@@ -28,11 +28,25 @@ class PrefrenceManager: NSObject {
             return false
         }
     }
+    
+    func set(string: String, key: String) {
+        self.userDefault?.setValue(string, forKey: key)
+    }
+    
+    func getString(forKey key: String) -> String? {
+        if let val = self.userDefault?.value(forKey: key) as? String {
+            return val
+        } else {
+            return nil
+        }
+    }
 }
 
 // constants
 extension PrefrenceManager {
     
     static let PREF_KEY_ONBOARD_COMPLETE : String = "completeOnboard"
+    static let PREF_KEY_PREFERRED_TEST : String = "preferredTest"
+    static let PREF_KEY_COOKING_STYLE : String = "cookingStyle"
     
 }

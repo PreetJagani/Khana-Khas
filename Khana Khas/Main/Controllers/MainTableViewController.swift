@@ -17,9 +17,24 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
+        
+        let customItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: #selector(didPressSettingsButton))
+        
+        self.navigationItem.rightBarButtonItems = [customItem]
         model = ChatViewModel()
         model?.modelDelegate = self
         self.model?.start()
+    }
+    
+    @objc func didPressSettingsButton(sender: Any?) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navVc = storyboard.instantiateViewController(withIdentifier: "settings") as! UINavigationController
+        
+//        if let ingredientsVc = navVc.viewControllers[0] as? IngredientsTableViewController {
+//            ingredientsVc.ingredientsDelegate = self
+//            ingredientsVc.selectedItems = Set(model?.activeIngredients ?? [])
+//        }
+        self.navigationController?.present(navVc, animated: true)
     }
     
     func refresh() {

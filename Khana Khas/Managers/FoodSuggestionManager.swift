@@ -19,6 +19,28 @@ enum IngredientType: Int {
     case Fruit = 3
 }
 
+enum FoodType: String, CaseIterable {
+    case Indian = "Indian"
+    case Mexican = "Mexican"
+    case Chinese = "Chinese"
+    case Italian = "Italian"
+    case Japanese = "Japanese"
+    case French = "French"
+    case Spanish = "Spanish"
+    case Thai = "Thai"
+    case Korean = "Korean"
+    case American = "American"
+    case Brazilian = "Brazilian"
+    case Turkish = "Turkish"
+    
+//    static func iterateEnum() {
+//        let items: [FoodType] = []
+//        for type in self.allCases {
+//            items.a
+//        }
+//    }
+}
+
 class Ingredient: Hashable, Differentiable, CustomStringConvertible {
     
     let name : String

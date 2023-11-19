@@ -29,8 +29,6 @@ class OnboardPrefrenceViewController: UIViewController {
     }
     
     func reloadTableView() {
-        
-        
         tableView.reloadData()
     }
 }
