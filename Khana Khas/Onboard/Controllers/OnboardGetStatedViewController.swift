@@ -61,7 +61,7 @@ class OnboardGetStatedViewController: UIViewController {
     
     @IBAction func didpressNextButton(_ sender: Any) {
         if self.pageControl.currentPage == 2 {
-            PrefrenceManager.shared.set(bool: true, key: PrefrenceManager.PREF_KEY_ONBOARD_COMPLETE)
+            PreferenceManager.shared.set(bool: true, key: PreferenceManager.PREF_KEY_ONBOARD_COMPLETE)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let vc = storyboard.instantiateInitialViewController() {
                 self.navigationController?.setViewControllers([vc], animated: true)

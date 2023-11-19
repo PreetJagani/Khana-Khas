@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OnboardPrefrenceViewController: UIViewController {
+class OnboardPreferenceViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -33,7 +33,7 @@ class OnboardPrefrenceViewController: UIViewController {
     }
 }
 
-class PrefrenceSelectionCellView : UITableViewCell {
+class PreferenceSelectionCellView : UITableViewCell {
     
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var prefOption: UILabel!
@@ -55,7 +55,7 @@ class PrefrenceSelectionCellView : UITableViewCell {
 }
 
 
-extension OnboardPrefrenceViewController : UITableViewDelegate, UITableViewDataSource {
+extension OnboardPreferenceViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count;
@@ -67,7 +67,7 @@ extension OnboardPrefrenceViewController : UITableViewDelegate, UITableViewDataS
         let item = items[index]
         let selected = selectedItem == item
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Pref Cell") as! PrefrenceSelectionCellView
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Pref Cell") as! PreferenceSelectionCellView
         cell.update(title: item, selected: selected)
         
         return cell;
@@ -82,6 +82,14 @@ extension OnboardPrefrenceViewController : UITableViewDelegate, UITableViewDataS
         let item = items[index]
         
         selectedItem = item
+        
+        if let title = self.title {
+            if title == "2" {
+                PreferenceManager.shared.set(string: selectedItem, key: PreferenceManager.PREF_KEY_PREFERRED_TEST)
+            } else if title == "3" {
+                PreferenceManager.shared.set(string: selectedItem, key: PreferenceManager.PREF_KEY_COOKING_STYLE)
+            }
+        }
         
         reloadTableView()
     }

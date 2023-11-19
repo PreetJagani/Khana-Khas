@@ -7,14 +7,18 @@
 
 import UIKit
 
-class PrefrenceManager: NSObject {
+class PreferenceManager: NSObject {
     
-    static let shared = PrefrenceManager()
+    static let shared = PreferenceManager()
     
     let userDefault : UserDefaults?
     
     private override init() {
         userDefault = UserDefaults()
+        super.init()
+        
+        self.ensure(value: PreferredTasteType.REGULAR.rawValue, key: PreferenceManager.PREF_KEY_PREFERRED_TEST)
+        self.ensure(value: FoodType.Indian.rawValue, key: PreferenceManager.PREF_KEY_COOKING_STYLE)
     }
     
     func set(bool: Bool, key: String) {
@@ -40,10 +44,17 @@ class PrefrenceManager: NSObject {
             return nil
         }
     }
+    
+    func ensure(value: String, key: String) {
+        guard self.getString(forKey: key) == nil else {
+            return
+        }
+        self.set(string: value, key: key)
+    }
 }
 
 // constants
-extension PrefrenceManager {
+extension PreferenceManager {
     
     static let PREF_KEY_ONBOARD_COMPLETE : String = "completeOnboard"
     static let PREF_KEY_PREFERRED_TEST : String = "preferredTest"

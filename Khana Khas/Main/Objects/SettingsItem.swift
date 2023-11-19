@@ -9,7 +9,7 @@ import UIKit
 
 import DifferenceKit
 
-class SettingsItem: NSObject, Differentiable {
+class SettingsItem: NSObject {
     
     let name: String
     let selected: Bool
@@ -18,12 +18,15 @@ class SettingsItem: NSObject, Differentiable {
         self.name = name
         self.selected = selected
     }
+}
+
+class SettingsSectionItem: NSObject {
     
-    var differenceIdentifier: String {
-        return name
-    }
+    let name: String
+    let items: [SettingsItem]
     
-    func isContentEqual(to source: SettingsItem) -> Bool {
-        return self.name == source.name && self.selected == source.selected
+    init(name: String, items: [SettingsItem]) {
+        self.name = name
+        self.items = items
     }
 }

@@ -49,10 +49,10 @@
 		ADA7AED22B09DD52007468A3 /* SettingsItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA7AED12B09DD52007468A3 /* SettingsItemTableViewCell.swift */; };
 		ADA7AED42B09DF73007468A3 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA7AED32B09DF73007468A3 /* SettingsItem.swift */; };
 		ADB6C02C2A7E2223004D8E04 /* DifferenceKit in Frameworks */ = {isa = PBXBuildFile; productRef = ADB6C02B2A7E2223004D8E04 /* DifferenceKit */; };
-		ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */; };
+		ADB73DCE2A74D9BB007D53E9 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCD2A74D9BB007D53E9 /* PreferenceManager.swift */; };
 		ADB73DD02A74DF25007D53E9 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */; };
 		ADB73DD22A74DF5B007D53E9 /* Entry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */; };
-		ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */; };
+		ADBCDF792A72B1E200049552 /* OnboardPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCDF782A72B1E200049552 /* OnboardPreferenceViewController.swift */; };
 		ADC0EC552A9B1A2200764E5E /* IngredientItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC0EC542A9B1A2200764E5E /* IngredientItemTableViewCell.swift */; };
 		ADF27DD92A92186B0035B1A4 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF27DD82A92186B0035B1A4 /* ChatTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -118,10 +118,10 @@
 		ADA7AECF2B09DB85007468A3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ADA7AED12B09DD52007468A3 /* SettingsItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemTableViewCell.swift; sourceTree = "<group>"; };
 		ADA7AED32B09DF73007468A3 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
-		ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrenceManager.swift; sourceTree = "<group>"; };
+		ADB73DCD2A74D9BB007D53E9 /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
 		ADB73DCF2A74DF25007D53E9 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		ADB73DD12A74DF5B007D53E9 /* Entry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entry.storyboard; sourceTree = "<group>"; };
-		ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPrefrenceViewController.swift; sourceTree = "<group>"; };
+		ADBCDF782A72B1E200049552 /* OnboardPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPreferenceViewController.swift; sourceTree = "<group>"; };
 		ADC0EC542A9B1A2200764E5E /* IngredientItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientItemTableViewCell.swift; sourceTree = "<group>"; };
 		ADF27DD82A92186B0035B1A4 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,7 +199,7 @@
 			children = (
 				AD111B582A6BAC9A00FE38B5 /* OnboardGetStatedViewController.swift */,
 				AD111B5A2A6BACC900FE38B5 /* OnboardPageViewController.swift */,
-				ADBCDF782A72B1E200049552 /* OnboardPrefrenceViewController.swift */,
+				ADBCDF782A72B1E200049552 /* OnboardPreferenceViewController.swift */,
 				AD8DA8952A72D6F70011B2B3 /* OnboardWelcomePageController.swift */,
 			);
 			path = Controllers;
@@ -319,7 +319,7 @@
 		ADB73DCC2A74D99E007D53E9 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				ADB73DCD2A74D9BB007D53E9 /* PrefrenceManager.swift */,
+				ADB73DCD2A74D9BB007D53E9 /* PreferenceManager.swift */,
 				AD5AC0792A91E08600E4A4F9 /* FoodSuggestionManager.swift */,
 				AD898E6E2A9F702400CC70D2 /* PanesManager.swift */,
 				AD985B442AA0DC4200321D57 /* ImageManager.swift */,
@@ -480,7 +480,7 @@
 				AD0663682A762E9A00C29E82 /* ChatQuetionTableViewCell.swift in Sources */,
 				AD92E5AB2A9CFADB006FF5DB /* ChatFoodRecipes.swift in Sources */,
 				AD8761002A8BB8C500419784 /* ChatOption.swift in Sources */,
-				ADBCDF792A72B1E200049552 /* OnboardPrefrenceViewController.swift in Sources */,
+				ADBCDF792A72B1E200049552 /* OnboardPreferenceViewController.swift in Sources */,
 				ADF27DD92A92186B0035B1A4 /* ChatTableViewCell.swift in Sources */,
 				AD985B452AA0DC4200321D57 /* ImageManager.swift in Sources */,
 				ADA7AED42B09DF73007468A3 /* SettingsItem.swift in Sources */,
@@ -495,7 +495,7 @@
 				AD8760F92A8BB86C00419784 /* ChatItem.swift in Sources */,
 				ADC0EC552A9B1A2200764E5E /* IngredientItemTableViewCell.swift in Sources */,
 				AD111B5B2A6BACC900FE38B5 /* OnboardPageViewController.swift in Sources */,
-				ADB73DCE2A74D9BB007D53E9 /* PrefrenceManager.swift in Sources */,
+				ADB73DCE2A74D9BB007D53E9 /* PreferenceManager.swift in Sources */,
 				AD8760FE2A8BB8AF00419784 /* ChatAnswer.swift in Sources */,
 				AD0663662A7626B000C29E82 /* ChatAnswerTableViewCell.swift in Sources */,
 				AD898E6D2A9F6B2000CC70D2 /* RecipeDetailViewController.swift in Sources */,

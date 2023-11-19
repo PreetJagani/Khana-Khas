@@ -20,12 +20,16 @@ class OnboardPageViewController: UIPageViewController {
         vc1.title = "1"
         
         
-        let vc2 : OnboardPrefrenceViewController = storyboard.instantiateViewController(withIdentifier: "Onboard Pref") as! OnboardPrefrenceViewController
-        vc2.update(title: "Choose Your Preferred Test", items: ["Regular", "Sweet", "Spicy"], selectedIndex: 0)
+        let vc2 : OnboardPreferenceViewController = storyboard.instantiateViewController(withIdentifier: "Onboard Pref") as! OnboardPreferenceViewController
+        vc2.update(title: "Choose Your Preferred Test", items: PreferredTasteType.allCases.map({ type in
+            type.rawValue
+        }), selectedIndex: 0)
         vc2.title = "2"
         
-        let vc3 : OnboardPrefrenceViewController = storyboard.instantiateViewController(withIdentifier: "Onboard Pref") as! OnboardPrefrenceViewController
-        vc3.update(title: "Choose Your Cooking Style", items: ["Gujarati", "Pujabi", "South Inidain", "Ilalian"], selectedIndex: 0)
+        let vc3 : OnboardPreferenceViewController = storyboard.instantiateViewController(withIdentifier: "Onboard Pref") as! OnboardPreferenceViewController
+        vc3.update(title: "Choose Your Cooking Style", items: FoodType.allCases.map({ type in
+            type.rawValue
+        }), selectedIndex: 0)
         vc3.title = "3"
         
         myViewControllers = [vc1, vc2, vc3]

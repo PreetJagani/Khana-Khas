@@ -31,9 +31,7 @@ class ChatViewModel: NSObject {
             ChatOption(text: "🥘 Dinner", rowNumber: 2),
             ChatOption(text: "🍽️ Lunch", rowNumber: 2)
         ], rows: 3))
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.appendNextItemIfNeeded()
-        }
+        self.appendNextItemIfNeeded()
     }
     
     func nextId() -> Int {
@@ -93,8 +91,9 @@ class ChatViewModel: NSObject {
         self.pendingItems.append(ChatItem.loadingItem)
         self.appendNextItemIfNeeded()
         var foodTime = self.activeOption?.text ?? "  Dinner"
+        var foodType = PreferenceManager.shared.getString(forKey: PreferenceManager.PREF_KEY_COOKING_STYLE) ?? "Gujarati"
         foodTime.removeFirst(2)
-        FoodSuggestionManager.shared.suggestFood(foodTime: foodTime, foodType: "Gujarati", ingredients: self.activeIngredients?.description ?? "[]", excludeRecipes: excludeRecipes) { suggestions, error in
+        FoodSuggestionManager.shared.suggestFood(foodTime: foodTime, foodType: foodType, ingredients: self.activeIngredients?.description ?? "[]", excludeRecipes: excludeRecipes) { suggestions, error in
             
             var foodRecipe: Array<Recipe> = []
             do {

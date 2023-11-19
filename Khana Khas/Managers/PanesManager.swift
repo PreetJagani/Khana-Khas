@@ -22,7 +22,7 @@ class PanesManager: NSObject {
     }
     
     func loadInitialVc() {
-        if PrefrenceManager.shared.getBool(forKey: PrefrenceManager.PREF_KEY_ONBOARD_COMPLETE) {
+        if PreferenceManager.shared.getBool(forKey: PreferenceManager.PREF_KEY_ONBOARD_COMPLETE) {
             self.showMainVC()
         } else {
             self.showOnboardVc()
