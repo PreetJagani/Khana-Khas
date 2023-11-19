@@ -94,7 +94,7 @@ class ChatViewModel: NSObject {
         self.appendNextItemIfNeeded()
         var foodTime = self.activeOption?.text ?? "  Dinner"
         foodTime.removeFirst(2)
-        FoodSuggestionManager.shared.suggestFood(foodTime: foodTime, foodType: "Gujarati", ingredients: self.activeIngredients?.description ?? "[]") { suggestions, error in
+        FoodSuggestionManager.shared.suggestFood(foodTime: foodTime, foodType: "Gujarati", ingredients: self.activeIngredients?.description ?? "[]", excludeRecipes: excludeRecipes) { suggestions, error in
             
             var foodRecipe: Array<Recipe> = []
             do {
@@ -114,24 +114,26 @@ class ChatViewModel: NSObject {
             DispatchQueue.main.async {
                 self.removeLoadingItem()
                 
-                if foodRecipe.count > 0 {
+                let isError = foodRecipe.count == 0
+                if !isError {
                     self.generatedRecipes.append(contentsOf: foodRecipe)
                     self.pendingItems.append(ChatFoodRecipes(id: self.nextId(), text: "Recipe", recipes: foodRecipe))
-                } else {
-                    self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Opps! Something went wrong"))
                 }
-                self.addRegenerateOptions()
+                self.addRegenerateOptions(isError: isError)
                 self.appendNextItemIfNeeded()
             }
         }
     }
     
-    // i fail can merge two answer item and give try again instead of more recipes
-    func addRegenerateOptions() {
-        self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Can I assist with anything else?"))
+    func addRegenerateOptions(isError: Bool) {
+        if isError {
+            self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Opps! Something went wrong, Can I assist with anything else?"))
+        } else {
+            self.pendingItems.append(ChatAnswer(id: self.nextId(), text: "Can I assist with anything else?"))
+        }
         self.pendingItems.append(ChatOptions(id: self.nextId(), text: "Regenerate", options: [
             ChatOption(text: "Start over", rowNumber: 0),
-            ChatOption(text: "More recipes", rowNumber: 0),
+            ChatOption(text: isError ? "Try Again" : "More recipes", rowNumber: 0),
 //            ChatOption(text: "Edit meal time", rowNumber: 1),
             ChatOption(text: "Edit ingredients", rowNumber: 1)
         ], rows: 2))
@@ -141,10 +143,11 @@ class ChatViewModel: NSObject {
         if option.text == "Start over" {
             self.activeOption = nil
             self.activeIngredients = nil
-            self.pendingItems.append(ChatQuestion(id: self.nextId(), text: "Start over"))
+            self.generatedRecipes.removeAll()
+            self.pendingItems.append(ChatQuestion(id: self.nextId(), text: option.text))
             self.start(includeGreetings: false)
-        } else if option.text == "More recipes" {
-            self.pendingItems.append(ChatQuestion(id: self.nextId(), text: "More recipes"))
+        } else if option.text == "More recipes" || option.text == "Try Again" {
+            self.pendingItems.append(ChatQuestion(id: self.nextId(), text: option.text))
             self.generateAnswer(excludeRecipes: self.generatedRecipes)
         }
         self.appendNextItemIfNeeded()
