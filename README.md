@@ -20,8 +20,8 @@
 
 ### Onboarding
 
-<video src="https://github.com/PreetJagani/Khana-Khas/assets/65854965/33008d30-280c-4d28-9824-2243efbc946f" width=240>
+https://github.com/PreetJagani/Khana-Khas/assets/65854965/41030675-1c95-48f5-8fc3-de89974e2a77
 
 ### Home Page
 
-<video src="https://github.com/PreetJagani/Khana-Khas/assets/65854965/5de54362-899d-4517-abc7-5184db51c5e4" width=240>
+https://github.com/PreetJagani/Khana-Khas/assets/65854965/fd9578c8-042e-4843-8f02-3b2861f96b96
