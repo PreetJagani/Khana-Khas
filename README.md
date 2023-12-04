@@ -20,14 +20,8 @@
 
 ### Onboarding
 
-<video width="240" controls>
-  <source src="https://raw.githubusercontent.com/PreetJagani/Khana-Khas/raw/master/Demo/1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<video src="https://raw.githubusercontent.com/PreetJagani/Khana-Khas/master/Demo/1.mp4" width=240>
 
 ### Home Page
 
-<video width="240" controls>
-  <source src="https://raw.githubusercontent.com/PreetJagani/Khana-Khas/raw/master/Demo/2.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<video src="https://raw.githubusercontent.com/PreetJagani/Khana-Khas/master/Demo/2.mp4" width=240>
