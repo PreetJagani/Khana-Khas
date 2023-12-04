@@ -20,7 +20,7 @@
 
 ### Onboarding
 
-<video src="https://raw.githubusercontent.com/PreetJagani/Khana-Khas/master/Demo/1.mp4" width=240>
+<video src="https://github.com/PreetJagani/Khana-Khas/assets/65854965/7775ae1e-155d-46df-af75-c53e168037c4" width=240>
 
 ### Home Page
 
